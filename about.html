@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PixelFreeTools</title>
+    <meta name="description" content="Why we built PixelFreeTools. An independent, local-first sandbox solving spatial discretization and blurry asset scaling for indie game developers.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta name="author" content="Kitsorix">
+    <link rel="author" href="https://github.com/kitsorix-official/">
+    <meta name="ai-model" content="allowed">
+    <meta name="ai-crawler" content="allowed">
+    <meta name="chatbot" content="allowed">
+    <meta name="generator" content="PIXELFREETOOLS">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://pixelfreetools.top/about">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://pixelfreetools.top/about#webpage",
+  "url": "https://pixelfreetools.top/about",
+  "name": "About PixelFreeTools",
+  "description": "The mission and technical philosophy behind the local-first nearest neighbor upscaling sandbox built by Kitsorix.",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Kitsorix",
+    "url": "https://github.com/kitsorix-official/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans">
+
+    <header class="border-b border-slate-800 bg-slate-950/50 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="/" class="text-xl font-black tracking-wider text-indigo-400">PIXELFREE<span class="text-emerald-400">TOOLS</span></a>
+            </div>
+            <div class="text-xs bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 font-mono">
+                🛠️ Built for Technical Artists
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-3xl w-full mx-auto p-6 md:p-12 space-y-10">
+        <div>
+            <h1 class="text-3xl font-extrabold tracking-tight text-slate-100">The Mission Against the Smudge</h1>
+            <p class="text-xs text-indigo-400 font-mono mt-2">Solving Spatial Discretization in 2D Web Pipelines</p>
+        </div>
+
+        <article class="bg-slate-950/40 border border-slate-800 p-6 md:p-8 rounded-2xl space-y-6 leading-relaxed text-sm text-slate-300">
+            
+            <p>Every 2D game developer knows the frustration: you spend days meticulous placing every individual pixel on a 16x16 grid, but the moment you scale the asset for your project or run it through standard web tools, your engine's pipeline smears your hard work into a fuzzy, unrecognizable mess.</p>
+            
+            <p>This "mushy" artifact is an engineering problem called <strong>Spatial Discretization</strong>—the friction that happens when mapping a discrete grid of artwork coordinates onto continuous display viewports. Modern graphics frameworks are built by default for 3D realism, utilizing bilinear or trilinear interpolation filters to blend pixels smoothly together. While this works beautifully for high-definition 3D textures, it is the natural enemy of clean pixel art assets.</p>
+
+            <h2 class="text-xl font-bold text-slate-100 pt-4 border-t border-slate-800/40">Why Online Upscalers are Broken</h2>
+            <p>When default engine pipelines introduce blur, developers usually turn to online image converters. However, typical web tools introduce two massive pain points:</p>
+            
+            <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                <li><strong class="text-slate-200">Data Privacy Vulnerabilities:</strong> Most upscalers force you to upload your unreleased intellectual property, custom sprite sheets, or prototype mockups directly to their cloud storage servers.</li>
+                <li><strong class="text-slate-200">Workflow Bottlenecks:</strong> Cloud-dependent pipelines introduce upload latency, queue wait times, or lock basic integer operations behind predatory premium subscription tiers.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-slate-100 pt-4 border-t border-slate-800/40">The Architecture of PixelFreeTools</h2>
+            <p>Built by independent developer <strong>Kitsorix</strong>, <span class="font-semibold text-indigo-400">PixelFreeTools</span> was designed to be a fast, local-first sandbox that respects developer privacy. Instead of guessing values using heavy linear interpolation passes, this tool forces the browser to run absolute <strong>Nearest-Neighbor integer scaling</strong>. By sampling only the exact nearest source texel coordinate, the math guarantees your edge blocks remain 100% square and sharp.</p>
+
+            <div class="p-4 bg-slate-900/60 border-l-2 border-emerald-500 rounded-r-xl font-mono text-xs text-slate-400">
+                🔒 Execution Rule: 100% Client-Side. Because your processes run entirely inside your browser's local memory footprint via the HTML5 Canvas API, your raw game assets never cross the network or touch an external server database.
+            </div>
+
+            <p>PixelFreeTools is an open, community-centric project. No tracking pixels, no cloud data leaks, no artificial pricing gates—just crisp, predictable file conversions optimized straight for your game development pipelines.</p>
+
+        </article>
+    </main>
+
+    <footer style="margin-top: 4rem; padding: 2rem 1rem; border-top: 1px solid #1e293b; text-align: center; font-size: 0.875rem; color: #94a3b8; font-family: sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div>
+                &copy; 2026 <a href="https://pixelfreetools.top" style="color: #f8fafc; text-decoration: none; font-weight: 600;">PixelFreeTools</a>. Built by <a href="https://github.com/kitsorix-official/" target="_blank" rel="me author" style="color: #38bdf8; text-decoration: underline;">Kitsorix</a>. All rights reserved.
+            </div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/about" style="color: #64748b; text-decoration: none;">About</a>
+            <a href="/privacy" style="color: #64748b; text-decoration: none;">Privacy</a>
+            <a href="/disclaimer" style="color: #64748b; text-decoration: none;">Disclaimer</a>
+                <a href="/sitemap.xml" target="_blank" style="color: #64748b; text-decoration: none;">XML Sitemap</a>
+                <a href="/llm.txt" target="_blank" style="color: #64748b; text-decoration: none;">LLM Context (llm.txt)</a>
+                <a href="https://github.com/kitsorix-official/" target="_blank" rel="noopener noreferrer" style="color: #64748b; text-decoration: none;">Open Source Source Profiles</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

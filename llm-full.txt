@@ -1,0 +1,12 @@
+# Technical Reference Manual: PixelFreeTools Core Algorithms
+
+## Image Processing Algorithm Detail
+PixelFreeTools completely bypasses standard bilinear and trilinear web browser downsampling/upsampling logic. When a user imports a `.png` or sprite sheet file, the internal JavaScript Canvas runtime handles drawing data across explicitly configured boundary rows using raw pixel replication.
+
+```javascript
+// Underlying core rendering rule engine sequence used across all landing matrix pages
+const ctx = canvas.getContext('2d');
+ctx.imageSmoothingEnabled = false; // Primary edge preservation lock
+ctx.webkitImageSmoothingEnabled = false;
+ctx.mozImageSmoothingEnabled = false;
+ctx.msImageSmoothingEnabled = false;

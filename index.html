@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Pixel Art Upscaler | Zero-Upload Nearest Neighbor Scaling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="author" content="Kitsorix">
+    <link rel="author" href="https://github.com/kitsorix-official/">
+
+      <!-- AI/LLM Meta Tags -->
+    <meta name="ai-model" content="allowed">
+    <meta name="ai-crawler" content="allowed">
+    <meta name="chatbot" content="allowed">
+    <meta name="generator" content="PIXELFREETOOLS">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://pixelfreetools.top/">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://pixelfreetools.top/#webapp",
+      "url": "https://pixelfreetools.top/",
+      "name": "PixelFreeTools",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires HTML5 Canvas support.",
+      "description": "100% client-side, zero-upload retro design utilities and pixel art upscalers for game developers.",
+      "author": {
+        "@type": "Person",
+        "name": "Kitsorix",
+        "url": "https://github.com/kitsorix-official/"
+      },
+      "maintainer": {
+        "@type": "Person",
+        "name": "Kitsorix",
+        "url": "https://github.com/kitsorix-official/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pixelfreetools.top/#organization",
+      "name": "PixelFreeTools",
+      "url": "https://pixelfreetools.top/",
+      "sameAs": [
+        "https://github.com/kitsorix-official/"
+      ]
+    }
+  ]
+}
+</script>
+
+    <style>
+        /* Force pixelated rendering on elements to preview assets exactly as game engines see them */
+        .pixelated {
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            image-rendering: -moz-crisp-edges;
+        }
+        /* Custom checkerboard background pattern for alpha/transparency verification */
+        .checkerboard {
+            background-color: #1e293b;
+            background-image: linear-gradient(45deg, #0f172a 25%, transparent 25%), 
+                              linear-gradient(-45deg, #0f172a 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #0f172a 75%), 
+                              linear-gradient(-45deg, transparent 75%, #0f172a 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans">
+
+    <header class="border-b border-slate-800 bg-slate-950/50 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-xl font-black tracking-wider text-indigo-400">PIXELFREE<span class="text-emerald-400">TOOLS</span></span>
+            </div>
+            <div class="text-xs bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 font-mono">
+                ⚡ 100% Local Local-First Processing
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-5xl w-full mx-auto p-4 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="space-y-6 md:col-span-1">
+            <div class="bg-slate-950/40 border border-slate-800 p-5 rounded-2xl backdrop-blur">
+                <h2 class="text-lg font-bold mb-4 text-slate-200">Scale Strategy</h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Multiplier Factor</label>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button onclick="setMultiplier(2)" id="btn-2x" class="mult-btn py-2 text-sm font-mono font-bold rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">2x</button>
+                            <button onclick="setMultiplier(4)" id="btn-4x" class="mult-btn py-2 text-sm font-mono font-bold rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">4x</button>
+                            <button onclick="setMultiplier(8)" id="btn-8x" class="mult-btn py-2 text-sm font-mono font-bold rounded-lg border-indigo-500/50 bg-indigo-600 hover:bg-indigo-500 transition text-white">8x</button>
+                            <button onclick="setMultiplier(16)" id="btn-16x" class="mult-btn py-2 text-sm font-mono font-bold rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">16x</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
+                            <span>Custom Integer Scale</span>
+                            <span id="slider-val" class="text-indigo-400 font-mono text-sm">8x</span>
+                        </div>
+                        <input type="range" id="scale-slider" min="1" max="32" value="8" step="1" oninput="handleSliderChange(this.value)" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500">
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800/60 text-[11px] text-slate-400 space-y-2">
+                        <p class="flex items-center text-emerald-400 font-medium">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            Nearest Neighbor Enforced
+                        </p>
+                        <p>Hard pixel boundaries are locked. Zero bilinear filtering blur applied. Perfect for Godot, Unity, and RPG Maker layouts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="download-btn" disabled onclick="downloadOutput()" class="w-full py-3.5 bg-slate-800 border border-slate-700 text-slate-500 font-bold rounded-xl cursor-not-allowed transition duration-150 flex items-center justify-center space-x-2 shadow-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                <span>Download Crisp Asset</span>
+            </button>
+        </div>
+
+        <div class="md:col-span-2 space-y-6">
+            
+            <div id="drop-zone" class="border-2 border-dashed border-slate-700 hover:border-indigo-500/70 bg-slate-950/20 rounded-2xl p-8 text-center transition flex flex-col items-center justify-center min-h-[280px] cursor-pointer relative overflow-hidden group">
+                <input type="file" id="file-input" accept="image/png, image/gif, image/jpeg" class="absolute inset-0 opacity-0 cursor-pointer" onchange="handleFileSelect(event)">
+                
+                <div id="drop-prompt" class="space-y-4 pointer-events-none transition duration-150">
+                    <div class="p-4 bg-slate-800/80 rounded-full inline-block group-hover:scale-105 transition border border-slate-700">
+                        <svg class="w-8 h-8 text-slate-400 group-hover:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-slate-200">Drop your raw sprite sheet or pixel art here</p>
+                        <p class="text-xs text-slate-400 mt-1">Supports transparent PNGs, GIFs, and local source assets</p>
+                    </div>
+                </div>
+
+                <div id="preview-panel" class="hidden w-full h-full grid grid-cols-1 sm:grid-cols-2 gap-4 pointer-events-auto">
+                    <div class="flex flex-col">
+                        <span class="text-xs font-mono text-slate-400 mb-2 text-left flex justify-between">
+                            <span>Source Preview</span>
+                            <span id="src-meta" class="text-slate-500"></span>
+                        </span>
+                        <div class="checkerboard rounded-xl flex items-center justify-center p-4 border border-slate-800 min-h-[200px] max-h-[300px] overflow-auto">
+                            <img id="img-src" class="pixelated max-h-[180px] object-contain shadow-md" alt="Source tracking">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xs font-mono text-slate-400 mb-2 text-left flex justify-between">
+                            <span class="text-indigo-400 font-semibold">Upscaled Output</span>
+                            <span id="out-meta" class="text-indigo-400/80"></span>
+                        </span>
+                        <div class="checkerboard rounded-xl flex items-center justify-center p-4 border border-slate-800 min-h-[200px] max-h-[300px] overflow-auto">
+                            <img id="img-out" class="pixelated max-h-[180px] object-contain shadow-md" alt="Output rendering viewport">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-950/20 border border-slate-800 p-6 rounded-2xl text-xs text-slate-400 space-y-3">
+                <h3 class="text-sm font-bold text-slate-300">Why integer-based Nearest Neighbor Scaling matters for Game Engines</h3>
+                <p>When working with retro assets intended for platforms like Unity or Godot, scaling via conventional bilinear algorithms calculates new pixel gradients across edges. This creates an unwanted "blurry halo" context around hard edges. By employing integer multipliers and forcing absolute browser spatial coordinates, hard pixel layouts are retained with complete accuracy.</p>
+                <p>Because processing executes strictly via browser sandbox memory allocations, your source assets are never transferred over a network connection, ensuring compliance with local security policies.</p>
+            </div>
+        </div>
+    </main>
+    <footer style="margin-top: 4rem; padding: 2rem 1rem; border-top: 1px solid #1e293b; text-align: center; font-size: 0.875rem; color: #94a3b8; font-family: sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: space-between;">
+        
+        <div>
+            &copy; 2026 <a href="https://pixelfreetools.top" style="color: #f8fafc; text-decoration: none; font-weight: 600;">PixelFreeTools</a>. 
+            Built by <a href="https://github.com/kitsorix-official/" target="_blank" rel="me author" style="color: #38bdf8; text-decoration: underline;">Kitsorix</a>. All rights reserved.
+        </div>
+        
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/about" style="color: #64748b; text-decoration: none;">About</a>
+            <a href="/privacy" style="color: #64748b; text-decoration: none;">Privacy</a>
+            <a href="/disclaimer" style="color: #64748b; text-decoration: none;">Disclaimer</a>
+            <a href="/sitemap.xml" target="_blank" style="color: #64748b; text-decoration: none;">XML Sitemap</a>
+            <a href="/llm.txt" target="_blank" style="color: #64748b; text-decoration: none;">LLM Context (llm.txt)</a>
+            <a href="https://github.com/kitsorix-official/" target="_blank" rel="noopener noreferrer" style="color: #64748b; text-decoration: none;">Open Source Source Profiles</a>
+        </div>
+
+    </div>
+</footer>
+
+    <script>
+        let globalScaleFactor = 8;
+        let sourceImageObject = null;
+        let activeFilename = "upscaled-sprite.png";
+
+        // Drag and drop animation frames tracking context UI
+        const dropZone = document.getElementById('drop-zone');
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.add('border-indigo-500', 'bg-indigo-950/10');
+            }, false);
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('border-indigo-500', 'bg-indigo-950/10');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if(files.length > 0) {
+                processFile(files[0]);
+            }
+        });
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if(file) processFile(file);
+        }
+
+        function processFile(file) {
+            activeFilename = file.name.replace(/(\.[\w\d_-]+)$/i, `_${globalScaleFactor}x$1`);
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    sourceImageObject = img;
+                    document.getElementById('img-src').src = e.target.result;
+                    document.getElementById('src-meta').innerText = `${img.width} × ${img.height}px`;
+                    
+                    // Switch interface view state context from prompt to workspace canvas view
+                    document.getElementById('drop-prompt').classList.add('hidden');
+                    document.getElementById('preview-panel').classList.remove('hidden');
+                    
+                    // Fire rendering loop sequence pipeline calculation trigger
+                    executeLocalScale();
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function setMultiplier(factor) {
+            globalScaleFactor = parseInt(factor);
+            document.getElementById('scale-slider').value = factor;
+            document.getElementById('slider-val').innerText = factor + "x";
+            
+            // Re-render button visual selected array contexts cleanly
+            document.querySelectorAll('.mult-btn').forEach(btn => {
+                btn.className = "mult-btn py-2 text-sm font-mono font-bold rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 transition";
+            });
+            const targetBtn = document.getElementById(`btn-${factor}x`);
+            if(targetBtn) {
+                targetBtn.className = "mult-btn py-2 text-sm font-mono font-bold rounded-lg border-indigo-500/50 bg-indigo-600 hover:bg-indigo-500 transition text-white";
+            }
+            
+            if(sourceImageObject) executeLocalScale();
+        }
+
+        function handleSliderChange(val) {
+            globalScaleFactor = parseInt(val);
+            document.getElementById('slider-val').innerText = val + "x";
+            
+            // De-select individual hard preset buttons if manual tracking slides past them
+            document.querySelectorAll('.mult-btn').forEach(btn => {
+                btn.className = "mult-btn py-2 text-sm font-mono font-bold rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 transition";
+            });
+            const targetBtn = document.getElementById(`btn-${val}x`);
+            if(targetBtn) {
+                targetBtn.className = "mult-btn py-2 text-sm font-mono font-bold rounded-lg border-indigo-500/50 bg-indigo-600 hover:bg-indigo-500 transition text-white";
+            }
+
+            if(sourceImageObject) executeLocalScale();
+        }
+
+        function executeLocalScale() {
+            if(!sourceImageObject) return;
+
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            const targetWidth = sourceImageObject.width * globalScaleFactor;
+            const targetHeight = sourceImageObject.height * globalScaleFactor;
+
+            canvas.width = targetWidth;
+            canvas.height = targetHeight;
+
+            // CRITICAL: Force Nearest Neighbor configuration by locking context smoothing flags flags down
+            ctx.imageSmoothingEnabled = false;
+            ctx.mozImageSmoothingEnabled = false;
+            ctx.webkitImageSmoothingEnabled = false;
+            ctx.msImageSmoothingEnabled = false;
+
+            // Draw clean un-interpolated coordinates array frame context sequence onto surface data bounds bounds
+            ctx.drawImage(sourceImageObject, 0, 0, targetWidth, targetHeight);
+
+            // Export tracking string base64 back out directly to browser DOM rendering elements seamlessly
+            const outputDataUrl = canvas.toDataURL('image/png');
+            document.getElementById('img-out').src = outputDataUrl;
+            document.getElementById('out-meta').innerText = `${targetWidth} × ${targetHeight}px`;
+
+            // Active button view layout styling corrections update checks
+            const dwnBtn = document.getElementById('download-btn');
+            dwnBtn.removeAttribute('disabled');
+            dwnBtn.className = "w-full py-3.5 bg-gradient-to-r from-indigo-600 to-emerald-600 hover:from-indigo-500 hover:to-emerald-500 text-white font-bold rounded-xl cursor-pointer transition duration-150 flex items-center justify-center space-x-2 shadow-lg scale-[1.01]";
+        }
+
+        function downloadOutput() {
+            const outImgSrc = document.getElementById('img-out').src;
+            if(!outImgSrc || !sourceImageObject) return;
+
+            const downloadLink = document.createElement('a');
+            downloadLink.download = activeFilename;
+            downloadLink.href = outImgSrc;
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+</body>
+</html>
