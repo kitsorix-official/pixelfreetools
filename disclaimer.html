@@ -1,85 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Disclaimer - PixelFreeTools</title>
-    <meta name="description" content="Trademark disclaimers, open-source project disclosures, and liability limits for PixelFreeTools.">
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <meta name="author" content="Kitsorix">
-    <link rel="author" href="https://github.com/kitsorix-official/">
-    <meta name="ai-model" content="allowed">
-    <meta name="ai-crawler" content="allowed">
-    <meta name="chatbot" content="allowed">
-    <meta name="generator" content="PIXELFREETOOLS">
-    <meta name="theme-color" content="#0f172a">
-    <link rel="canonical" href="https://pixelfreetools.top/disclaimer">
-
-    <script type="application/ld+json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Legal disclaimer for PixelFreeTools. Trademark disclosures, fair use notice, and liability framework for our open-source pixel art scaling tool." />
+  <title>Legal Disclaimer | PixelFreeTools</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              400: '#7c8fff',
+              500: '#5b6bff',
+              600: '#4c57f5',
+              700: '#3d44e0',
+            },
+            dark: {
+              200: '#0f1020',
+              300: '#0a0b18',
+              400: '#060712',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-up': 'slideUp 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .section-fade.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://pixelfreetools.top/disclaimer#webpage",
-  "url": "https://pixelfreetools.top/disclaimer",
-  "name": "Legal Disclaimer - PixelFreeTools",
-  "description": "Trademark disclaimers and open-source project disclosures isolating our system from brand affiliations.",
-  "publisher": {
-    "@type": "Person",
-    "name": "Kitsorix",
-    "url": "https://github.com/kitsorix-official/"
-  }
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pixelfreetools.top/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Disclaimer",
+      "item": "https://pixelfreetools.top/disclaimer"
+    }
+  ]
 }
 </script>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans">
+<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
 
-    <header class="border-b border-slate-800 bg-slate-950/50 backdrop-blur">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <a href="/" class="text-xl font-black tracking-wider text-indigo-400">PIXELFREE<span class="text-emerald-400">TOOLS</span></a>
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
+    Skip to main content
+  </a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="relative" role="banner">
+   <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+              </svg>
             </div>
-            <div class="text-xs bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 font-mono">
-                ⚖️ Legal Terms &amp; Fair Use
-            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
+            <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+            <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How it works</a></li>
+            <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+            <li>
+              <a href="#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+                <span>Upload Sprite</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile menu button -->
+          <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
         </div>
-    </header>
 
-    <main class="flex-1 max-w-3xl w-full mx-auto p-6 md:p-12 space-y-8">
-        <div>
-            <h1 class="text-3xl font-extrabold tracking-tight text-slate-100">Legal Disclaimer</h1>
-            <p class="text-xs text-slate-400 font-mono mt-2">Last Updated: May 20, 2026</p>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4" role="menu">
+          <ul class="space-y-2 text-sm" role="list">
+            <li><a href="#features" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Features</a></li>
+            <li><a href="#how-it-works" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How it works</a></li>
+            <li><a href="#faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="#uploader" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Upload Sprite</a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <section class="bg-slate-950/40 border border-slate-800 p-6 rounded-2xl space-y-4 leading-relaxed text-sm text-slate-300">
-            <h2 class="text-lg font-bold text-slate-100">1. Trademark and Brand Affiliation Disclosure</h2>
-            <p>PixelFreeTools is a completely independent, community-driven open-source suite built by an individual developer. All product names, target software environments, systems, or corporate brand designations used across our matrix layouts—including but not limited to <strong>GameMaker, Unity, Godot, RPG Maker, and Unreal Engine</strong>—are registered trademarks belonging entirely to their respective legal owners.</p>
-            
-            <div class="p-4 bg-slate-900/60 border-l-2 border-indigo-500 rounded-r-xl font-mono text-xs text-slate-400">
-                Notice: References to these platforms are utilized exclusively under Nominative Fair Use guidelines to inform developers about file size and rendering system asset compatibility options.
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="disclaimer-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center animate-fade-in">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-yellow-400 mb-6">
+            <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+            <span>⚖️ Legal Terms & Fair Use</span>
+          </div>
+          <h1 id="disclaimer-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
+            Legal <span class="gradient-text">Disclaimer</span>
+          </h1>
+          <p class="text-base text-gray-400 leading-relaxed">
+            <time datetime="2026-05-20">Last Updated: May 20, 2026</time>
+          </p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main-content" role="main">
+
+    <!-- Section 1 -->
+    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="section-1-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
-
-            <p>This deployment project is <strong>not endorsed by, directly affiliated with, sponsored by, or linked in any corporate capacity to any known industry brand, software engine studio, or gaming corporation</strong>. We are a standalone asset conversion utility sandbox.</p>
-
-            <h2 class="text-lg font-bold text-slate-100 mt-6 pt-4 border-t border-slate-800/60">2. Liability Framework</h2>
-            <p>The image processing tools hosted on this domain are provided to users on an <strong>"as is" and "as available" basis</strong> without explicit technical warranties of any sort. While we employ browser-enforced, nearest-neighbor scaling rules to lock pixel sharpness safely, we assume no liability or tracking accountability for corruption or data degradation occurring within your pipeline development directories.</p>
-        </section>
-    </main>
-
-    <footer style="margin-top: 4rem; padding: 2rem 1rem; border-top: 1px solid #1e293b; text-align: center; font-size: 0.875rem; color: #94a3b8; font-family: sans-serif;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: space-between;">
             <div>
-                &copy; 2026 <a href="https://pixelfreetools.top" style="color: #f8fafc; text-decoration: none; font-weight: 600;">PixelFreeTools</a>. Built by <a href="https://github.com/kitsorix-official/" target="_blank" rel="me author" style="color: #38bdf8; text-decoration: underline;">Kitsorix</a>. All rights reserved.
+              <h2 id="section-1-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+                1. Trademark and Brand Affiliation Disclosure
+              </h2>
             </div>
-            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <a href="/about" style="color: #64748b; text-decoration: none;">About</a>
-            <a href="/privacy" style="color: #64748b; text-decoration: none;">Privacy</a>
-            <a href="/disclaimer" style="color: #64748b; text-decoration: none;">Disclaimer</a>
-                <a href="/sitemap.xml" target="_blank" style="color: #64748b; text-decoration: none;">XML Sitemap</a>
-                <a href="/llm.txt" target="_blank" style="color: #64748b; text-decoration: none;">LLM Context (llm.txt)</a>
-                <a href="https://github.com/kitsorix-official/" target="_blank" rel="noopener noreferrer" style="color: #64748b; text-decoration: none;">Open Source Source Profiles</a>
-            </div>
+          </div>
+          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
+            PixelFreeTools is a completely independent, community-driven open-source suite built by an individual developer. All product names, target software environments, systems, or corporate brand designations used across our matrix layouts—including but not limited to GameMaker, Unity, Godot, RPG Maker, and Unreal Engine—are registered trademarks belonging entirely to their respective legal owners.
+          </p>
+
+          <div class="ml-16 rounded-xl bg-yellow-500/5 border border-yellow-500/20 p-5 mb-6">
+            <p class="text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-2">Notice</p>
+            <p class="text-gray-300 leading-relaxed">
+              References to these platforms are utilized exclusively under Nominative Fair Use guidelines to inform developers about file size and rendering system asset compatibility options.
+            </p>
+          </div>
+
+          <p class="text-gray-300 leading-relaxed pl-16">
+            This deployment project is not endorsed by, directly affiliated with, sponsored by, or linked in any corporate capacity to any known industry brand, software engine studio, or gaming corporation. We are a standalone asset conversion utility sandbox.
+          </p>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="py-12 lg:py-16 bg-dark-200/30 border-b border-white/5" aria-labelledby="section-2-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+              <h2 id="section-2-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+                2. Liability Framework
+              </h2>
+            </div>
+          </div>
+          <p class="text-gray-300 leading-relaxed pl-16">
+            The image processing tools hosted on this domain are provided to users on an "as is" and "as available" basis without explicit technical warranties of any sort. While we employ browser-enforced, nearest-neighbor scaling rules to lock pixel sharpness safely, we assume no liability or tracking accountability for corruption or data degradation occurring within your pipeline development directories.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="summary-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <h2 id="summary-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-4">
+            In summary
+          </h2>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            PixelFreeTools is an independent, open-source project. We respect the trademarks of all referenced platforms and operate under fair use principles. Our tools are provided as-is, with all processing happening locally in your browser.
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            If you have questions about this disclaimer, please visit our <a href="/about" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">About page</a> or reach out via our <a href="https://github.com/kitsorix-official/" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">GitHub repository</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+   <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+            </svg>
+          </div>
+          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
+        </div>
+        <nav aria-label="Legal">
+          <ul class="flex items-center gap-6 text-sm" role="list">
+            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
+            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
+            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      menuIconOpen.classList.toggle('hidden');
+      menuIconClose.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
