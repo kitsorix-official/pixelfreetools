@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Straight answers to the most asked pixel art questions: is it hard, is it free, which software to use, sizes, copyright, AI, and more. Plus a free pixel art scaler." />
+  <title>Pixel Art FAQ | Answers to Your Questions | PixelFreeTools</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="msvalidate.01" content="B2E53C79E770973763213D81766BAC4B" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              400: '#7c8fff',
+              500: '#5b6bff',
+              600: '#4c57f5',
+              700: '#3d44e0',
+            },
+            dark: {
+              200: '#0f1020',
+              300: '#0a0b18',
+              400: '#060712',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .section-fade.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pixel art is a form of digital art where images are built pixel by pixel on a grid, with every square placed deliberately. It grew out of the low-resolution graphics of early arcade games and 8-bit consoles." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art hard?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The basics are easy to learn - most people can draw a first sprite in minutes. Mastering clean outlines, shading and animation takes practice, but it is one of the most approachable digital art styles." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art easier than drawing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For most beginners, yes. The grid and small canvas are forgiving, and you place individual squares instead of freehand strokes. Traditional drawing skills still help, but they are not required to start." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can make pixel art entirely free using tools like Piskel, Pixilart, Pixelorama or LibreSprite. Paid tools like Aseprite cost about $20 once but are optional." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art 2D?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Classic pixel art is a 2D medium. The 3D equivalent is voxel art (cubes instead of pixels)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art 8 bit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. 8-bit describes the NES / Game Boy era look, but pixel art spans many styles - 16-bit SNES and Genesis, GBA, and modern indie looks like Celeste and Stardew Valley." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art retro?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The style is strongly associated with retro games, but it is still actively used by modern indie games. Calling it retro refers to the nostalgic 8-bit and 16-bit aesthetic." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art 3D?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Classic pixel art is flat and 2D. The 3D version of the aesthetic is voxel art, made with tools like MagicaVoxel and Qubicle." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can pixel art be vector?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can convert pixel art to vector shapes, but the result is no longer pixel art - smooth curves replace the individual squares. Pixel art is inherently raster (grid-based)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art real art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Pixel art is a recognized art form with its own history, communities and professional artists, spanning games, animation and illustration." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art a game?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Pixel art is an art style, not a genre or type of game. Many games simply use it for their visuals." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art drawing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes - it is drawing, but with pixels as the mark instead of strokes. Each pixel is placed intentionally like a tiny square brush stroke." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are sprites pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sprites are game images, and many are made as pixel art. But not all sprites are pixel art, and not all pixel art is sprites - it is also used for icons, backgrounds, tiles and standalone illustrations." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are pixel art games still popular?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Pixel art remains one of the most popular styles in indie games - Celeste, Stardew Valley, Undertale and dozens of hit titles ship with it every year." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who invented pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The term 'pixel art' was first published by Adele Goldberg and Robert Flegal of Xerox PARC in 1982, and the word 'pixel' appeared in 1965. The art form itself grew from early arcade games like Space Invaders (1978) and Pac-Man (1980)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is pixel art so popular?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nostalgia for retro games, a low barrier to entry, fast production, and the charming constraint of limited resolution make it popular with both hobbyists and indie developers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which software is best for pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Aseprite (~$20 once) is the industry standard. Free options include Pixelorama, LibreSprite, Piskel and Pixilart. See our full software guide for details." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I create pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can draw in a browser with Piskel, Pixilart or Pixelorama, or install desktop apps like Aseprite or LibreSprite. Mobile options include Pixel Studio and Pixelc." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in Procreate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Create a small canvas, turn off the stream line and use a 1px hard pencil with no anti-aliasing, then zoom in and draw on the grid." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in Photoshop?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Use a small canvas, a hard round 1px brush with anti-aliasing off, and set image resampling to 'Nearest Neighbor' so scaling stays crisp." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in Krita?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Krita has dedicated pixel art tools and a grid view, making it a solid free option." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in GIMP?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Zoom in, use a 1px pencil (not the soft brush), and disable any smoothing. GIMP also supports indexed color palettes." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in Clip Studio Paint?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Clip Studio includes pixel and grid-friendly tools, and many artists use it for retro style work." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in Godot?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Godot ships with a built-in pixel art editor and import settings that keep pixel art crisp when scaled. Many developers also build pixel art games with Godot itself." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in Blender?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Possible, but not ideal. Blender is a 3D tool; its texture painting and Grease Pencil modes can produce pixel art, but dedicated editors are far more practical." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make pixel art in Canva?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Canva is limited for pixel art. It offers an AI 'PixelArt Studio', but it is not a real pixel editor - use a dedicated tool for hand-made sprites." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I do pixel art in MS Paint?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes! MS Paint is the classic choice. Zoom in, enable the grid, and use the 1px pencil tool." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I draw pixel art with a mouse?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because you place individual pixels rather than strokes, a mouse works perfectly fine. Many professional artists started with a mouse." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does pixel art need wifi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Desktop editors like Aseprite, Pixelorama and LibreSprite work fully offline. Only browser or cloud-based apps require an internet connection." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does pixel art cost money?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It does not have to. Quality free tools exist (Piskel, Pixelorama, LibreSprite, GIMP, Krita). Professional tools like Aseprite cost about $20 as a one-time purchase." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does pixel art have ads?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The art form itself has no ads. Some free mobile apps (Pixilart, Pixel Studio) show ads, and usually offer a paid ad-free tier." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does pixel art have dark mode?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most desktop editors have a dark UI. On mobile, dark theme is sometimes a paid feature - for example Pixel Studio PRO includes it." }
+      },
+      {
+        "@type": "Question",
+        "name": "What size should pixel art be?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common sizes are 16x16, 32x32, 48x48 and 64x64 for sprites and tiles, depending on detail. See our pixel art size guide for a full breakdown." }
+      },
+      {
+        "@type": "Question",
+        "name": "How big should pixel art sprites be?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For games, 16x16 to 64x64 covers most tiles and characters; 64x64 gives room for detail. Retro console resolutions like the NES 256x240 and SNES 256x224 are good whole-screen targets." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should pixel art have outlines?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It is a style choice, not a rule. Outlines make characters readable against busy backgrounds; many artists use them, but plenty of clean styles do without." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No - pixel art is made by hand. However, AI tools now exist that generate or upscale pixel art. Generic AI generators tend to produce 'pixel-styled' images rather than true grid-aligned pixel art." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does pixel art use AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hand-made pixel art does not. AI pixel art generators (like Sprite AI, Retro Diffusion or PixelLab) do, and are useful for concepts or placeholders, but usually still need manual cleanup." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI is best for pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dedicated tools that generate on a fixed grid - Sprite AI, Retro Diffusion and PixelLab - beat general image models like Midjourney or DALL-E for actual game-ready pixel art." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I sell pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can sell original pixel art on itch.io, Fiverr, Etsy, Gumroad and game asset stores. Your original work is automatically protected by copyright." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can pixel art be copyrighted?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Original pixel art is automatically protected by copyright the moment you create it. Selling or reusing someone else's sprites (even lightly edited) without permission is not allowed." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Undertale pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Undertale (2015, by Toby Fox) uses a retro pixel art style and renders at 640x480, with sprites designed for crisp integer scaling." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is pixel art in Minecraft?",
+        "acceptedAnswer": { "@type": "Answer", "text": "People build pixel art in Minecraft by placing blocks on a grid. You can also convert an image to a block-by-block map with tools like Spritecraft." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art safe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Making pixel art is a safe hobby. Just check the privacy terms of any online editor or mobile app before uploading your work." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art haram?",
+        "acceptedAnswer": { "@type": "Answer", "text": "There is no single universal ruling - it depends on what is depicted and on the scholarly interpretation you follow. Depicting inanimate objects is generally seen as acceptable, while animate beings are debated. Ask a scholar you trust for guidance." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do pixel art tattoos age well?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Like all tattoos, they blur over time. Bolder outlines and larger pixel blocks age noticeably better than fine, tiny details." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pick a free tool, use a small canvas (16x16 or 32x32), turn the grid on, and start placing pixels. Start with simple shapes, then learn outlines and shading. See our how-to guide." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pixelfreetools.top/" },
+      { "@type": "ListItem", "position": 2, "name": "Pixel Art FAQ", "item": "https://pixelfreetools.top/faq" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
+    Skip to main content
+  </a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="relative" role="banner">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+              </svg>
+            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <ul class="hidden lg:flex items-center gap-5 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="text-gray-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="text-gray-400 hover:text-white transition-colors">How to Make</a></li>
+            <li><a href="/best-pixel-art-software" class="text-gray-400 hover:text-white transition-colors">Software</a></li>
+            <li><a href="/selling-pixel-art" class="text-gray-400 hover:text-white transition-colors">Selling</a></li>
+            <li><a href="/faq" class="text-brand-400 hover:text-white transition-colors">FAQ</a></li>
+            <li>
+              <a href="/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+                <span>Open Tool</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile menu button -->
+          <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden lg:hidden pb-4" role="menu">
+          <ul class="space-y-2 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
+            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Best Software</a></li>
+            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="/" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Open Tool</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="faq-page-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center animate-fade-in">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-brand-400 mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span>Pixel Art FAQ</span>
+          </div>
+          <h1 id="faq-page-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
+            Every Pixel Art <span class="gradient-text">Question, Answered</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            Short, straight answers to the questions people actually search - from "is it hard?" to "can I sell it?".
+          </p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main-content" role="main">
+
+    <!-- Basics -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="basics-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">The Basics</span>
+          <h2 id="basics-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">What is pixel art?</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">What is pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">A form of digital art where images are built pixel by pixel on a grid, with every square placed deliberately. It grew out of the low-resolution graphics of early arcade games and 8-bit consoles.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art drawing?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes - it is drawing, but with pixels as the mark instead of freehand strokes. Every pixel is placed intentionally, like a tiny square brush stroke.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art 2D?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Classic pixel art is a flat, 2D medium. The 3D equivalent is voxel art, which uses cubes instead of pixels.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art 8 bit?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Not always. 8-bit describes the NES and Game Boy era look, but pixel art spans 16-bit SNES/Genesis, GBA and modern indie styles like Celeste and Stardew Valley.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art retro?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">The style is strongly tied to retro games, but it is still actively used today. Calling it retro refers to the nostalgic 8-bit and 16-bit aesthetic.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art real art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Pixel art is a recognized art form with its own history, communities and professionals, spanning games, animation and illustration.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art a game?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">No. Pixel art is an art style, not a genre. Many games simply use it for their visuals.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Are sprites pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Sprites are game images, and many are made as pixel art. But not all sprites are pixel art, and pixel art is also used for icons, tiles, backgrounds and illustrations.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Who invented pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">The word "pixel" was first published in 1965, and the term "pixel art" appeared in 1982 from Adele Goldberg and Robert Flegal of Xerox PARC. The art form itself grew from arcade games like Space Invaders (1978) and Pac-Man (1980).</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Why is pixel art so popular?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Nostalgia for retro games, a low barrier to entry, fast production, and the charming constraint of limited resolution keep it popular with hobbyists and indie developers alike.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Are pixel art games still popular?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. It remains one of the most popular styles in indie games - Celeste, Stardew Valley, Undertale and many more ship with it every year. <a href="/what-is-pixel-art" class="text-brand-400 hover:text-white transition-colors">Learn more about pixel art.</a></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Difficulty -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="difficulty-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Difficulty &amp; Learning</span>
+          <h2 id="difficulty-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Is pixel art hard?</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art hard?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">The basics are easy - most people draw a first sprite in minutes. Mastering outlines, shading and animation takes practice, but it is one of the most approachable digital art styles.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art easier than drawing?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">For most beginners, yes. The grid and small canvas are forgiving, and you place squares instead of freehand strokes. Traditional skills still help, but they are not required to start.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art easy?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Getting started is easy - a simple 16x16 sprite can be finished in a few minutes. Making complex, polished art is where the skill comes in.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art hard to learn?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">No. Because it uses a small, structured grid, you can pick up the fundamentals in days and improve steadily with practice.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art fun?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Most people find it relaxing and rewarding - a bit like a puzzle. The immediate, visible result of each placed pixel keeps it satisfying.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Should I learn pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">If you enjoy retro aesthetics, want to make your own game assets, or want a low-cost art hobby, absolutely. It has a gentle learning curve and great communities. <a href="/how-to-make-pixel-art" class="text-brand-400 hover:text-white transition-colors">See how to start.</a></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Software -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="tools-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">Tools &amp; Software</span>
+          <h2 id="tools-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Where and how can I make pixel art?</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Which software is best for pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Aseprite (~$20 once) is the industry standard. Great free options are Pixelorama, LibreSprite, Piskel and Pixilart. <a href="/best-pixel-art-software" class="text-brand-400 hover:text-white transition-colors">See the full comparison.</a></div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Where can I create pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">In a browser with Piskel, Pixilart or Pixelorama; on desktop with Aseprite or LibreSprite; or on mobile with Pixel Studio or Pixelc.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in Procreate?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Use a small canvas, turn off stream line, pick a 1px hard pencil with no anti-aliasing, and zoom in to place pixels on the grid.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in Photoshop?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Use a small canvas, a hard round 1px brush with anti-aliasing off, and set image resampling to "Nearest Neighbor" so scaling stays crisp.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in Krita?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Krita ships with dedicated pixel art tools and a grid view, making it a strong free option.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in GIMP?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Zoom in, use a 1px pencil rather than a soft brush, and disable smoothing. GIMP also supports indexed color palettes.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in Clip Studio Paint?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Clip Studio includes pixel and grid-friendly tools, and many artists use it for retro style work.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in Godot?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Godot has a built-in pixel art editor and import settings that keep pixel art crisp when scaled. Many developers also make pixel art games with Godot.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in Blender?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Possible but not ideal. Blender is a 3D tool; its texture painting and Grease Pencil modes can do pixel work, but dedicated editors are far more practical.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make pixel art in Canva?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Canva is limited for pixel art. Its AI "PixelArt Studio" is not a real pixel editor, so use a dedicated tool for hand-made sprites.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I do pixel art in MS Paint?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes - MS Paint is the classic choice. Zoom in, enable the grid, and use the 1px pencil tool.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I draw pixel art with a mouse?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Because you place individual pixels rather than freehand strokes, a mouse works perfectly. Many professional artists started with a mouse.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art free? Does it cost money?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">You can make pixel art completely free with Piskel, Pixilart, Pixelorama or LibreSprite. Paid tools like Aseprite (~$20 once) add power but are optional.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Does pixel art need wifi or internet?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">No. Desktop editors like Aseprite, Pixelorama and LibreSprite work fully offline. Only browser or cloud-based apps require a connection.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Does pixel art have ads or dark mode?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">The art form itself has neither. Some free mobile apps (Pixilart, Pixel Studio) show ads and charge for a paid ad-free tier; dark theme is sometimes part of that tier too.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sizes & Specs -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="sizes-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-semibold uppercase tracking-wider mb-4">Sizes &amp; Specs</span>
+          <h2 id="sizes-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">What size should pixel art be?</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">What size should pixel art be?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Common sprite and tile sizes are 16x16, 32x32, 48x48 and 64x64. The best size depends on how much detail you need. <a href="/pixel-art-size-guide" class="text-brand-400 hover:text-white transition-colors">See the full size guide.</a></div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">How big should pixel art sprites be?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">For games, 16x16 to 64x64 covers most tiles and characters; 64x64 leaves room for detail. Whole-screen targets like NES 256x240 or SNES 256x224 are also common.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Should pixel art have outlines?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">It is a style choice, not a rule. Outlines make characters readable against busy backgrounds; many artists use them, but clean styles work fine without.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D, Vector & AI -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="ai-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-semibold uppercase tracking-wider mb-4">3D, Vector &amp; AI</span>
+          <h2 id="ai-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Pixel art and new technology</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art 3D?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Classic pixel art is flat and 2D. The 3D version of the look is voxel art, made with tools like MagicaVoxel and Qubicle.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can pixel art be vector?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">You can convert pixel art to vector shapes, but it stops being pixel art - curves replace the individual squares. Pixel art is inherently raster (grid-based).</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Does pixel art use AI?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Hand-made pixel art does not. AI pixel art generators do, and they are useful for concepts and placeholders - but generic generators usually produce "pixel-styled" images that still need manual cleanup.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Which AI is best for pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Dedicated tools that generate on a fixed grid - Sprite AI, Retro Diffusion and PixelLab - beat general models like Midjourney or DALL-E for game-ready pixel art.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selling & Copyright -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="selling-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400 text-xs font-semibold uppercase tracking-wider mb-4">Selling &amp; Copyright</span>
+          <h2 id="selling-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Can I sell pixel art?</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I sell pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Sell original pixel art on itch.io, Fiverr, Etsy, Gumroad and game asset stores. <a href="/selling-pixel-art" class="text-brand-400 hover:text-white transition-colors">See the selling guide.</a></div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can pixel art be copyrighted?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Original pixel art is automatically protected by copyright the moment it is created. Selling or reusing someone else's sprites - even lightly edited - without permission is not allowed.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Games & Misc -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="games-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">Games &amp; Everything Else</span>
+          <h2 id="games-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">The rest</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is Undertale pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Undertale (2015, by Toby Fox) uses a retro pixel art style and renders at 640x480, with sprites designed for crisp integer scaling.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">What is pixel art in Minecraft?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">People build pixel art in Minecraft by placing blocks on a grid. You can convert an image into a block-by-block map with tools like Spritecraft.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">How to do pixel art in r/place?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">r/place is a massive collaborative pixel canvas. During events, communities coordinate to place individual pixels over time to build shared art.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art safe?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Making pixel art is a safe hobby. Just check the privacy terms of any online editor or mobile app before uploading your work.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art haram?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">There is no single universal ruling - it depends on what is depicted and which scholarly interpretation you follow. Depicting inanimate objects is generally considered acceptable, while depictions of living beings are debated. Ask a scholar you trust for guidance.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Do pixel art tattoos age well?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Like all tattoos, they blur over time. Bold outlines and larger pixel blocks age noticeably better than tiny, fine details.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">How do I make pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Pick a free tool, use a small canvas (16x16 or 32x32), turn the grid on, and start placing pixels. Begin with simple shapes, then learn outlines and shading. <a href="/how-to-make-pixel-art" class="text-brand-400 hover:text-white transition-colors">Read the beginner guide.</a></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="faq-cta-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-brand-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center section-fade">
+        <h2 id="faq-cta-heading" class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6">
+          Made your sprites? <span class="gradient-text">Scale them up crisp.</span>
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+          Our free pixel art scaler upscales your PNG, JPEG or GIF up to 32x with zero blur - no uploads, fully client-side.
+        </p>
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-2xl shadow-brand-500/40 hover:shadow-brand-500/60 hover:scale-105 transition-all">
+          <span>Upscale Your Sprite Now</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+            </svg>
+          </div>
+          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
+        </div>
+        <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+          <a href="/what-is-pixel-art" class="text-gray-500 hover:text-white transition-colors">What Is Pixel Art</a>
+          <a href="/pixel-art-size-guide" class="text-gray-500 hover:text-white transition-colors">Size Guide</a>
+          <a href="/how-to-make-pixel-art" class="text-gray-500 hover:text-white transition-colors">How to Make</a>
+          <a href="/best-pixel-art-software" class="text-gray-500 hover:text-white transition-colors">Software</a>
+          <a href="/selling-pixel-art" class="text-gray-500 hover:text-white transition-colors">Selling</a>
+          <a href="/faq" class="text-gray-500 hover:text-white transition-colors">FAQ</a>
+        </nav>
+        <nav aria-label="Legal">
+          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
+            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
+            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
+            <li><a href="/terms" class="text-gray-500 hover:text-white transition-colors">Terms</a></li>
+            <li><a href="/copyright" class="text-gray-500 hover:text-white transition-colors">Copyright</a></li>
+            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      menuIconOpen.classList.toggle('hidden');
+      menuIconClose.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

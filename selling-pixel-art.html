@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Can you sell pixel art? Yes - and the copyright is yours automatically. Where to sell (itch.io, Fiverr, Etsy, Gumroad), how licensing works, and what not to sell." />
+  <title>Can You Sell Pixel Art? Where &amp; How | PixelFreeTools</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="msvalidate.01" content="B2E53C79E770973763213D81766BAC4B" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              400: '#7c8fff',
+              500: '#5b6bff',
+              600: '#4c57f5',
+              700: '#3d44e0',
+            },
+            dark: {
+              200: '#0f1020',
+              300: '#0a0b18',
+              400: '#060712',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .section-fade.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Can You Sell Pixel Art?",
+    "description": "How to sell pixel art legally and profitably - copyright basics, the best marketplaces (itch.io, Fiverr, Etsy, Gumroad, asset stores), licensing models, and what not to sell.",
+    "url": "https://pixelfreetools.top/selling-pixel-art",
+    "author": { "@type": "Organization", "name": "PixelFreeTools" },
+    "publisher": { "@type": "Organization", "name": "PixelFreeTools" },
+    "datePublished": "2026-08-16",
+    "dateModified": "2026-08-16"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I sell pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. As soon as you create a pixel art image, you own the copyright to it in most countries, and you are free to sell it - as a game asset, commission, print, or product." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art copyrighted?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Original pixel art is protected by copyright the moment you create it and fix it in a tangible form - no registration needed. Selling it does not give the buyer ownership of the copyright." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I sell pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Game asset packs sell well on itch.io, Unity Asset Store and GameDev Market. Commissions are easiest through Fiverr. Art prints, stickers and merchandise work on Etsy, and you can sell almost anything directly on Gumroad." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a license to sell pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If it is your own work, no. You just need a license agreement that tells buyers what they can do with it - for example CC0 (public domain), CC-BY (credit required), or a custom license that limits commercial use or resale." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I sell AI-generated pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, but check the terms of the specific AI tool you used. Some generators allow commercial use, others restrict it, and a few tools' terms have changed over time. When in doubt, ask the tool's creator." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make money selling pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, though it is usually a side income rather than a full salary. Beginners often earn modest amounts on Fiverr and itch.io; experienced artists with strong portfolios and game clients can make a consistent living." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pixelfreetools.top/" },
+      { "@type": "ListItem", "position": 2, "name": "Selling Pixel Art", "item": "https://pixelfreetools.top/selling-pixel-art" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
+    Skip to main content
+  </a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="relative" role="banner">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+              </svg>
+            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+          </a>
+
+          <ul class="hidden lg:flex items-center gap-5 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="text-gray-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="text-gray-400 hover:text-white transition-colors">How to Make</a></li>
+            <li><a href="/best-pixel-art-software" class="text-gray-400 hover:text-white transition-colors">Software</a></li>
+            <li><a href="/selling-pixel-art" class="text-brand-400 hover:text-white transition-colors">Selling</a></li>
+            <li><a href="/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+            <li>
+              <a href="/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+                <span>Open Tool</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden pb-4" role="menu">
+          <ul class="space-y-2 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
+            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Best Software</a></li>
+            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="/" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Open Tool</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="selling-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center animate-fade-in">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-brand-400 mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span>Legal &amp; Marketplace Guide</span>
+          </div>
+          <h1 id="selling-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
+            Can You Sell <span class="gradient-text">Pixel Art?</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            Yes - it's your copyright from the moment you draw it. Here's where to sell, how licensing works, and what to avoid.
+          </p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main-content" role="main">
+
+    <!-- Copyright -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="copyright-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-semibold uppercase tracking-wider mb-4">The Good News</span>
+          <h2 id="copyright-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Your pixel art is copyrighted the moment you make it</h2>
+          <div class="space-y-4 text-gray-400 leading-relaxed">
+            <p>
+              In almost every country, original artwork is protected by copyright automatically as soon as you create it and fix it in a tangible form - you don't need to register it or pay a fee. That protection is what makes selling possible.
+            </p>
+            <p>
+              <strong class="text-white">Selling a file does not transfer your copyright.</strong> Unless you explicitly sign it away, the buyer gets permission to use the art (whatever your license says), while you keep ownership. That means you can sell the same asset to many customers, or license it differently to different buyers.
+            </p>
+            <p>
+              A few practical notes: registration (like the US Copyright Office) only matters if you later want to sue for infringement. And if someone pays you to draw something for their game, that is a <em>commission</em> - the rights depend on what your contract says, so put it in writing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where to sell -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="where-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">Marketplaces</span>
+          <h2 id="where-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Where to sell pixel art</h2>
+          <div class="space-y-4 text-gray-400 leading-relaxed">
+            <p><strong class="text-white">itch.io</strong> - the most beginner-friendly spot for game assets. Create a store page free, set your own price or "pay what you want," and keep your revenue share on the higher end. Great for sprite packs and tilesets.</p>
+            <p><strong class="text-white">Fiverr</strong> - the easiest place to sell commissions. Buyers search for "pixel art" and pay per order, so a clear gig with examples and a fast turnaround gets you started quickly.</p>
+            <p><strong class="text-white">Etsy</strong> - the right home for pixel art as merchandise: prints, stickers, keychains, cross-stitch patterns and decorations. Handmade-style products perform best.</p>
+            <p><strong class="text-white">Gumroad</strong> - sell anything (packs, tutorials, brushes, fonts) directly with no marketplace search traffic, and keep a large cut. You bring the audience; it handles checkout.</p>
+            <p><strong class="text-white">Unity Asset Store / GameDev Market</strong> - bigger payouts but stricter requirements. Unity has quality and support standards for listing; GameDev Market is easier to get approved on and aimed squarely at game developers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Licensing -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="licensing-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">Licensing</span>
+          <h2 id="licensing-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">How licenses work for pixel art</h2>
+          <div class="space-y-4 text-gray-400 leading-relaxed">
+            <p>
+              Your license tells buyers what they may and may not do. Pick one per product and state it clearly on the page:
+            </p>
+            <p><strong class="text-white">CC0 (public domain)</strong> - anyone can use the art commercially or not, with or without credit, and modify it. Maximizes reach; you keep no control.</p>
+            <p><strong class="text-white">CC-BY</strong> - same freedom, but users must credit you. A good balance for free packs that build your name.</p>
+            <p><strong class="text-white">CC-BY-SA</strong> - credit plus share-alike: any game that uses the art must also be released under a compatible open license. Rare for commercial games.</p>
+            <p><strong class="text-white">Custom standard license</strong> - the norm on marketplaces. Typically: royalty-free use in any number of commercial and non-commercial projects, no redistribution of the raw assets, no reselling. You can add tiers like "small team" vs "unlimited / work-for-hire."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Don'ts -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="donts-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4">Stay Legal</span>
+          <h2 id="donts-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">What not to sell</h2>
+          <div class="space-y-4 text-gray-400 leading-relaxed">
+            <p><strong class="text-white">Don't sell ripped sprites.</strong> Extracting sprites from games like Pokémon, Mario or Final Fantasy and selling them (even "edited") is copyright and trademark infringement, and marketplaces remove it on DMCA takedowns.</p>
+            <p><strong class="text-white">Don't sell fan art of franchises.</strong> Fan-made sprites of existing characters are derivative works; selling them commercially is infringement, even if you drew every pixel. Free fan art is fine - selling it usually isn't.</p>
+            <p><strong class="text-white">Don't copy asset packs.</strong> Re-selling or slightly modifying someone else's pack violates its license. If you used a brush or font, make sure its license allows inclusion in sold assets.</p>
+            <p><strong class="text-white">Check AI terms before selling AI art.</strong> If your art is AI-assisted, review the generator's commercial-use terms - they vary, and some have changed over time. When in doubt, ask the tool's creator.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Making money -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="money-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Pricing</span>
+          <h2 id="money-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Can you actually make money at this?</h2>
+          <div class="space-y-4 text-gray-400 leading-relaxed">
+            <p>
+              Yes, but think of it as a side income that can grow. New artists typically earn modest amounts from small commissions and $3-$15 asset packs; artists with a recognizable style, a social following and repeat game clients can turn it into a real income.
+            </p>
+            <p>
+              A few things that move the needle: <strong class="text-white">bundle your assets</strong> (a full tileset sells far better than one sprite), <strong class="text-white">show animated GIFs</strong> instead of static images, <strong class="text-white">keep a consistent style</strong> across packs so buyers come back, and <strong class="text-white">deliver on time</strong> on commission sites - that's what earns repeat orders.
+            </p>
+            <p>
+              Whatever you sell, deliver assets at whole-number integer scales with a clean transparent background. Sellers who hand buyers blurry, anti-aliased or wrongly-sized sprites lose repeat customers fast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="selling-faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">FAQ</span>
+          <h2 id="selling-faq-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Selling questions, answered</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art copyrighted?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Original pixel art is protected by copyright the moment you create it and fix it in a tangible form - no registration needed. Selling it does not give the buyer ownership of the copyright.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Where can I sell pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Game asset packs sell well on itch.io, Unity Asset Store and GameDev Market. Commissions are easiest through Fiverr. Art prints, stickers and merchandise work on Etsy, and you can sell almost anything directly on Gumroad.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Do I need a license to sell pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">If it is your own work, no. You just need a license agreement that tells buyers what they can do with it - for example CC0 (public domain), CC-BY (credit required), or a custom license that limits commercial use or resale.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I sell AI-generated pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Usually yes, but check the terms of the specific AI tool you used. Some generators allow commercial use, others restrict it, and a few tools' terms have changed over time. When in doubt, ask the tool's creator.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Can I make money selling pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes, though it is usually a side income rather than a full salary. Beginners often earn modest amounts on Fiverr and itch.io; experienced artists with strong portfolios and game clients can make a consistent living.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="selling-cta-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-brand-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center section-fade">
+        <h2 id="selling-cta-heading" class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6">
+          About to list a pack? <span class="gradient-text">Ship crisp sprites.</span>
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+          Buyers don't tolerate blurry assets. Scale your pixel art to clean whole-number sizes with our free scaler - fully client-side.
+        </p>
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-2xl shadow-brand-500/40 hover:shadow-brand-500/60 hover:scale-105 transition-all">
+          <span>Upscale a Sprite Free</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+            </svg>
+          </div>
+          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
+        </div>
+        <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+          <a href="/what-is-pixel-art" class="text-gray-500 hover:text-white transition-colors">What Is Pixel Art</a>
+          <a href="/pixel-art-size-guide" class="text-gray-500 hover:text-white transition-colors">Size Guide</a>
+          <a href="/how-to-make-pixel-art" class="text-gray-500 hover:text-white transition-colors">How to Make</a>
+          <a href="/best-pixel-art-software" class="text-gray-500 hover:text-white transition-colors">Software</a>
+          <a href="/selling-pixel-art" class="text-gray-500 hover:text-white transition-colors">Selling</a>
+          <a href="/faq" class="text-gray-500 hover:text-white transition-colors">FAQ</a>
+        </nav>
+        <nav aria-label="Legal">
+          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
+            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
+            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
+            <li><a href="/terms" class="text-gray-500 hover:text-white transition-colors">Terms</a></li>
+            <li><a href="/copyright" class="text-gray-500 hover:text-white transition-colors">Copyright</a></li>
+            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      menuIconOpen.classList.toggle('hidden');
+      menuIconClose.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="What is pixel art? A clear definition, its history from Space Invaders to modern indie games, and what makes it 2D, 8-bit and retro - in plain English." />
+  <title>What Is Pixel Art? Definition, History & Style | PixelFreeTools</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="msvalidate.01" content="B2E53C79E770973763213D81766BAC4B" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              400: '#7c8fff',
+              500: '#5b6bff',
+              600: '#4c57f5',
+              700: '#3d44e0',
+            },
+            dark: {
+              200: '#0f1020',
+              300: '#0a0b18',
+              400: '#060712',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .section-fade.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is Pixel Art? Definition, History and Style",
+    "description": "Pixel art explained simply: how it works, its history from Space Invaders to Undertale, and why it is 2D, 8-bit and retro.",
+    "url": "https://pixelfreetools.top/what-is-pixel-art",
+    "author": { "@type": "Organization", "name": "PixelFreeTools" },
+    "publisher": { "@type": "Organization", "name": "PixelFreeTools" },
+    "datePublished": "2026-08-16",
+    "dateModified": "2026-08-16"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pixel art is a form of digital art built pixel by pixel on a grid, where every square is placed deliberately. It grew out of the low-resolution graphics of early arcade games and 8-bit consoles." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art real art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Pixel art is a recognized art form with its own history, communities and professional artists, spanning games, animation and illustration." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art 2D?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Classic pixel art is a flat, 2D medium. The 3D equivalent is voxel art, made with cubes instead of pixels." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pixel art 8 bit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Not always. 8-bit describes the NES and Game Boy era look, but pixel art spans 16-bit SNES/Genesis, GBA and modern indie styles." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who invented pixel art?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The word 'pixel' was first published in 1965, and the term 'pixel art' appeared in 1982 from Adele Goldberg and Robert Flegal of Xerox PARC. The art form grew from arcade games like Space Invaders (1978) and Pac-Man (1980)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is pixel art so popular?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nostalgia for retro games, a low barrier to entry, fast production, and the charming constraint of limited resolution keep it popular with hobbyists and indie developers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does pixel art look better on CRT?",
+        "acceptedAnswer": { "@type": "Answer", "text": "CRT screens blurred and blended pixels with scanlines, softening harsh edges and creating a glow. Modern screens need integer scaling and optional scanline filters to recreate that look." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are pixel art games still popular?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. It remains one of the most popular styles in indie games - Celeste, Stardew Valley, Undertale and many more ship with it every year." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pixelfreetools.top/" },
+      { "@type": "ListItem", "position": 2, "name": "What Is Pixel Art", "item": "https://pixelfreetools.top/what-is-pixel-art" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
+    Skip to main content
+  </a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="relative" role="banner">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+              </svg>
+            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+          </a>
+
+          <ul class="hidden lg:flex items-center gap-5 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="text-brand-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="text-gray-400 hover:text-white transition-colors">How to Make</a></li>
+            <li><a href="/best-pixel-art-software" class="text-gray-400 hover:text-white transition-colors">Software</a></li>
+            <li><a href="/selling-pixel-art" class="text-gray-400 hover:text-white transition-colors">Selling</a></li>
+            <li><a href="/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+            <li>
+              <a href="/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+                <span>Open Tool</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden pb-4" role="menu">
+          <ul class="space-y-2 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
+            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Best Software</a></li>
+            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="/" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Open Tool</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="wipa-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center animate-fade-in">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-brand-400 mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span>Guide</span>
+          </div>
+          <h1 id="wipa-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
+            What Is <span class="gradient-text">Pixel Art</span>?
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            A plain-English definition, how the style works, and where it came from - from 1970s arcades to today's indie hits.
+          </p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main-content" role="main">
+
+    <!-- Definition -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="definition-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">Definition</span>
+          <h2 id="definition-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Pixel art in one sentence</h2>
+          <p class="text-lg text-gray-300 leading-relaxed mb-6">
+            Pixel art is a digital art form in which images are built up one square at a time on a grid, with every pixel placed deliberately.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            The name comes from <strong class="text-white">"pix"</strong> (pictures) + <strong class="text-white">"el"</strong> (element) - a pixel is the smallest element of a digital image. What makes pixel art special is that the artist works <em>on that grid</em>, like a mosaic, rather than drawing smooth strokes and letting software handle the details. Early games had no choice: screens had so few pixels that every single one had to count. Today, choosing to work that way is exactly the point.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="how-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-semibold uppercase tracking-wider mb-4">How It Works</span>
+          <h2 id="how-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">What makes art "pixel art"</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">A fixed grid</h3>
+              <p class="text-gray-400 leading-relaxed">Art is created on a small canvas like 16x16 or 32x32. The resolution is a choice, and it defines how chunky or detailed the result is.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Limited colors</h3>
+              <p class="text-gray-400 leading-relaxed">Classic pixel art uses a small, intentional palette. Retro machines had strict color budgets (the Game Boy had just four shades), and many modern artists keep the same discipline.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Hard edges</h3>
+              <p class="text-gray-400 leading-relaxed">No anti-aliasing or blur between colors. Shading and texture come from manual techniques like dithering - pattern of alternating pixels - rather than smooth gradients.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Scaling by integers</h3>
+              <p class="text-gray-400 leading-relaxed">To display big, sprites are multiplied by whole numbers (2x, 3x, 4x) with nearest-neighbor scaling, keeping the pixels crisp squares instead of blurring them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2D, 8-bit, retro -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="style-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">Style Labels</span>
+          <h2 id="style-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Is pixel art 2D, 8-bit and retro?</h2>
+          <div class="space-y-4 text-gray-400 leading-relaxed">
+            <p><strong class="text-white">2D?</strong> Yes. Pixel art is inherently flat and 2D. The 3D equivalent - building with cubes instead of squares - is called <strong class="text-white">voxel art</strong> (MagicaVoxel, Qubicle).</p>
+            <p><strong class="text-white">8-bit?</strong> Only some of it. "8-bit" refers to the NES / Game Boy generation (early 1980s). Pixel art also covers the 16-bit SNES / Genesis era, the Game Boy Advance, and modern indie styles that mix all of them.</p>
+            <p><strong class="text-white">Retro?</strong> In style, yes - the aesthetic is strongly tied to retro games. But it is far from dead: Celeste, Stardew Valley, Undertale and countless other modern games use pixel art every year. What you're seeing is a deliberate, nostalgic style, not an old technology.</p>
+            <p><strong class="text-white">Vector?</strong> No. Pixel art is raster (grid-based). Converting it to vector shapes makes it scalable forever, but it stops being pixel art.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="history-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">History</span>
+          <h2 id="history-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">A very short history of pixel art</h2>
+          <div class="space-y-4 text-gray-400 leading-relaxed">
+            <p>
+              The word <strong class="text-white">"pixel"</strong> was first published in 1965 by Frederic Billingsley at NASA's Jet Propulsion Laboratory, describing the picture elements of scanned space-probe images. The term <strong class="text-white">"pixel art"</strong> appeared later, in a 1982 journal letter by Adele Goldberg and Robert Flegal at Xerox PARC.
+            </p>
+            <p>
+              As an art form, pixel art grew from the <strong class="text-white">golden age of arcade games</strong>: Space Invaders (1978), Pac-Man (1980), and the 8-bit consoles that followed - the NES (1983) and Master System (1985). Programmers of that era were often the artists too, working within tiny resolutions and tiny color budgets.
+            </p>
+            <p>
+              In the late 1980s and early 1990s the European <strong class="text-white">demoscene</strong> turned pixel art into an art form for its own sake, with "graphicians" producing stills and animations on Commodore 64s, Atari STs and Amigas. Software like Deluxe Paint (1985) made placing pixels practical and even pleasant.
+            </p>
+            <p>
+              After 3D graphics took over mainstream gaming, pixel art never disappeared - it became a beloved, deliberate style. The indie game boom (Super Meat Boy, Cave Story, then Undertale, Celeste, Stardew Valley) made it one of the most visible art styles in games today.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRT -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="crt-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-semibold uppercase tracking-wider mb-4">The CRT Look</span>
+          <h2 id="crt-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Why pixel art "looked better" on a CRT</h2>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            Old games were designed for cathode-ray tube (CRT) televisions, which did three things a modern LCD doesn't:
+          </p>
+          <ul class="space-y-3 text-gray-400 leading-relaxed mb-6">
+            <li class="flex gap-3"><span class="text-brand-400">•</span><span><strong class="text-white">Blended the pixels</strong> - the phosphors glowed and bled into each other, softening harsh 1px steps.</span></li>
+            <li class="flex gap-3"><span class="text-brand-400">•</span><span><strong class="text-white">Added scanlines</strong> - horizontal gaps between lines gave art texture and hid dithering artifacts.</span></li>
+            <li class="flex gap-3"><span class="text-brand-400">•</span><span><strong class="text-white">Stretched the aspect ratio</strong> - non-square pixels made 256x240 render as a proper 4:3 image.</span></li>
+          </ul>
+          <p class="text-gray-400 leading-relaxed">
+            On a modern display, pixel art needs <strong class="text-white">integer scaling</strong> (whole-number multiples, never fractions) so squares stay square and edges stay sharp. Emulators like RetroArch and mGBA have an "integer scale" option for exactly this reason. Some players add scanline shaders to recreate the CRT feel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular games -->
+    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="games-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">Famous Examples</span>
+          <h2 id="games-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Famous pixel art games</h2>
+          <ul class="space-y-3 text-gray-400 leading-relaxed">
+            <li><strong class="text-white">Undertale (2015)</strong> - Toby Fox's retro-style RPG; renders at 640x480 with sprites designed for crisp 2x scaling.</li>
+            <li><strong class="text-white">Stardew Valley (2016)</strong> - the farming sim's entire world is hand-made pixel art.</li>
+            <li><strong class="text-white">Celeste (2018)</strong> - a modern pixel platformer with a famously clean, readable style.</li>
+            <li><strong class="text-white">Shovel Knight (2014)</strong> - intentionally follows NES-era rules of resolution and color.</li>
+            <li><strong class="text-white">Minecraft (2011)</strong> - block-based; players also build pixel art from blocks in-game.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="wipa-faq-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-fade mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">FAQ</span>
+          <h2 id="wipa-faq-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Quick answers</h2>
+        </div>
+        <div class="section-fade space-y-3">
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Is pixel art real art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. It is a recognized art form with its own history, communities and professionals, spanning games, animation and illustration.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Who invented pixel art?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">The word "pixel" was first published in 1965 and "pixel art" in 1982. The style itself grew from arcade games like Space Invaders (1978) and Pac-Man (1980).</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Why is pixel art so popular?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Nostalgia, a low barrier to entry, fast production, and the charming constraint of limited resolution keep it popular with hobbyists and indie developers.</div>
+          </details>
+
+          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="text-lg font-semibold text-white">Are pixel art games still popular?</h3>
+              <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes - it remains one of the most popular styles in indie games. <a href="/pixel-art-size-guide" class="text-brand-400 hover:text-white transition-colors">Learn about pixel art sizes</a> or <a href="/how-to-make-pixel-art" class="text-brand-400 hover:text-white transition-colors">start making your own.</a></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="wipa-cta-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-brand-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center section-fade">
+        <h2 id="wipa-cta-heading" class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6">
+          Got pixel art that needs <span class="gradient-text">scaling?</span>
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+          Keep those hard edges with our free, client-side pixel art scaler - up to 32x, zero blur, zero uploads.
+        </p>
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-2xl shadow-brand-500/40 hover:shadow-brand-500/60 hover:scale-105 transition-all">
+          <span>Upscale Your Sprites Free</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+            </svg>
+          </div>
+          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
+        </div>
+        <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+          <a href="/what-is-pixel-art" class="text-gray-500 hover:text-white transition-colors">What Is Pixel Art</a>
+          <a href="/pixel-art-size-guide" class="text-gray-500 hover:text-white transition-colors">Size Guide</a>
+          <a href="/how-to-make-pixel-art" class="text-gray-500 hover:text-white transition-colors">How to Make</a>
+          <a href="/best-pixel-art-software" class="text-gray-500 hover:text-white transition-colors">Software</a>
+          <a href="/selling-pixel-art" class="text-gray-500 hover:text-white transition-colors">Selling</a>
+          <a href="/faq" class="text-gray-500 hover:text-white transition-colors">FAQ</a>
+        </nav>
+        <nav aria-label="Legal">
+          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
+            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
+            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
+            <li><a href="/terms" class="text-gray-500 hover:text-white transition-colors">Terms</a></li>
+            <li><a href="/copyright" class="text-gray-500 hover:text-white transition-colors">Copyright</a></li>
+            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      menuIconOpen.classList.toggle('hidden');
+      menuIconClose.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
