@@ -233,66 +233,11 @@
 </head>
 <body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
 
-  <!-- Skip to content link for keyboard users -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
-    Skip to main content
-  </a>
-
   <!-- ================= HEADER ================= -->
   <header class="relative" role="banner">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <!-- Logo -->
-          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
-              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-              </svg>
-            </div>
-            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
-          </a>
-
-          <!-- Desktop nav -->
-          <ul class="hidden md:flex items-center gap-6 text-sm" role="list">
-            <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-            <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How it works</a></li>
-            <li><a href="/what-is-pixel-art" class="text-gray-400 hover:text-white transition-colors">Guides</a></li>
-            <li><a href="/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-            <li>
-              <a href="#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
-                <span>Upload Sprite</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </a>
-            </li>
-          </ul>
-
-          <!-- Mobile menu button -->
-          <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4" role="menu">
-          <ul class="space-y-2 text-sm" role="list">
-            <li><a href="#features" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Features</a></li>
-            <li><a href="#how-it-works" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How it works</a></li>
-            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Guides</a></li>
-            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
-            <li><a href="#uploader" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Upload Sprite</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="uploader" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden" aria-labelledby="hero-heading">
+    <!-- Hero Section (first in DOM so screen readers hit the H1 first) -->
+    <div id="uploader" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden" aria-labelledby="hero-heading">
       <!-- Background glow -->
       <div class="absolute inset-0 -z-10" aria-hidden="true">
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
@@ -412,7 +357,63 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Skip to content link for keyboard users (after hero so screen readers get H1 first) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
+      Skip to main content
+    </a>
+
+    <!-- Navbar (fixed via CSS, visually at top regardless of DOM order) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
+              </svg>
+            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <ul class="hidden md:flex items-center gap-6 text-sm" role="list">
+            <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+            <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How it works</a></li>
+            <li><a href="/what-is-pixel-art" class="text-gray-400 hover:text-white transition-colors">Guides</a></li>
+            <li><a href="/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+            <li>
+              <a href="#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+                <span>Upload Sprite</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile menu button -->
+          <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4" role="menu">
+          <ul class="space-y-2 text-sm" role="list">
+            <li><a href="#features" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Features</a></li>
+            <li><a href="#how-it-works" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How it works</a></li>
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Guides</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="#uploader" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Upload Sprite</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
   </header>
 
   <!-- ================= MAIN ================= -->

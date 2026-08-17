@@ -120,13 +120,37 @@
 </head>
 <body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
 
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
-    Skip to main content
-  </a>
-
   <!-- ================= HEADER ================= -->
   <header class="relative" role="banner">
-    <!-- Navbar -->
+    <!-- Hero (first in DOM for screen readers) -->
+    <div class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="howto-heading">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center animate-fade-in">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-brand-400 mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span>Beginner's Guide</span>
+          </div>
+          <h1 id="howto-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
+            How to Make <span class="gradient-text">Pixel Art</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            Your first sprite is closer than you think. Here's exactly how to start - tool, canvas, and the techniques that make it look good.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skip to content link for keyboard users (after hero so screen readers get H1 first) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-white focus:rounded-md">
+      Skip to main content
+    </a>
+
+    <!-- Navbar (fixed via CSS, visually at top regardless of DOM order) -->
     <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
@@ -175,29 +199,6 @@
         </div>
       </div>
     </nav>
-
-    <!-- Hero -->
-    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="howto-heading">
-      <div class="absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute top-20 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-      </div>
-
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center animate-fade-in">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-brand-400 mb-6">
-            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-            <span>Beginner's Guide</span>
-          </div>
-          <h1 id="howto-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
-            How to Make <span class="gradient-text">Pixel Art</span>
-          </h1>
-          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Your first sprite is closer than you think. Here's exactly how to start - tool, canvas, and the techniques that make it look good.
-          </p>
-        </div>
-      </div>
-    </section>
   </header>
 
   <!-- ================= MAIN ================= -->
