@@ -126,6 +126,12 @@
     @keyframes spin { to { transform: rotate(360deg); } }
     .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .section-fade.visible { opacity: 1; transform: translateY(0); }
+    #locker-modal .offer-card:hover { border-color: rgba(124, 143, 255, 0.4); transform: translateY(-2px); }
+    #locker-modal .offer-card.completed-offer { border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.05); }
+    #locker-modal .offer-card.completed-offer .offer-complete-btn { display: none; }
+    #locker-modal .offer-card.completed-offer .offer-completed-badge { display: inline-flex; }
+    #locker-modal .offer-card .offer-complete-btn { display: inline-flex; }
+    #locker-modal .offer-card .offer-completed-badge { display: none; }
   </style>
  <script type="application/ld+json">
 [
@@ -385,7 +391,7 @@
               <div class="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <button id="download-btn" type="button" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-purple-500 text-white font-semibold shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100" aria-label="Download upscaled image">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                  <span>Download PNG</span>
+                  <span id="download-btn-text">Download PNG</span>
                 </button>
                 <span class="text-xs text-gray-500">Ready for Unity, Godot & GameMaker</span>
               </div>
@@ -742,7 +748,7 @@
               <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
             </svg>
           </div>
-          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
+          <span class="text-sm text-gray-500">&copy; 2026 PixelFreeTools.</span>
         </div>
         <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
           <a href="/what-is-pixel-art" class="text-gray-500 hover:text-white transition-colors">What Is Pixel Art</a>
@@ -764,6 +770,46 @@
       </div>
     </div>
   </footer>
+
+  <!-- ================= CONTENT LOCKER MODAL ================= -->
+  <div id="locker-modal" class="fixed inset-0 z-[200] hidden" role="dialog" aria-modal="true" aria-labelledby="locker-modal-title">
+    <div id="locker-modal-overlay" class="absolute inset-0 bg-dark-300/95 backdrop-blur-md"></div>
+    <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+      <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-dark-200/80 backdrop-blur border border-white/10 glow-border animate-slide-up">
+        <button id="locker-modal-close" type="button" class="absolute top-4 right-4 p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors z-20" aria-label="Close">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <div class="p-6 sm:p-8">
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-brand-500/30">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <h2 id="locker-modal-title" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-3">Unlock More Scaling</h2>
+            <p class="text-gray-400 leading-relaxed max-w-md mx-auto">You've used the tool <span id="locker-usage-count" class="text-brand-400 font-semibold">3</span> times. Complete a quick offer below to keep scaling for this session.</p>
+          </div>
+
+          <div id="locker-offers-loading" class="text-center py-8">
+            <svg class="w-8 h-8 text-brand-400 spin-slow mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <p class="mt-3 text-sm text-gray-400">Loading offers...</p>
+          </div>
+
+          <div id="locker-offers-grid" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+
+          <div id="locker-offers-error" class="hidden text-center py-8">
+            <p class="text-gray-400 mb-4">Could not load offers. Please try again.</p>
+            <button id="locker-retry-btn" type="button" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors">
+              Retry
+            </button>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/5 text-center">
+            <p class="text-xs text-gray-500">After completing an offer, click "I completed it" to unlock. Your unlock lasts for this browser session only.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ================= SCRIPTS ================= -->
   <script>
@@ -872,14 +918,171 @@
       reader.readAsDataURL(file);
     }
 
-    // Download button
+    // ================= CONTENT LOCKER =================
+    const LOCKER_API = 'https://appsave.online/api/v2';
+    const LOCKER_TOKEN = '46842|vp8kncaaGoETdrn3pakHQgbgYCm2cJV2ofDDNMVG7d68a023';
+    const USAGE_LIMIT = 3;
+
+    function getUsageCount() {
+      return parseInt(localStorage.getItem('pft_usage_count') || '0', 10);
+    }
+
+    function incrementUsage() {
+      const count = getUsageCount() + 1;
+      localStorage.setItem('pft_usage_count', String(count));
+      return count;
+    }
+
+    function isUnlocked() {
+      return sessionStorage.getItem('pft_unlocked') === '1';
+    }
+
+    function setUnlocked() {
+      sessionStorage.setItem('pft_unlocked', '1');
+    }
+
+    async function getUserIP() {
+      try {
+        const res = await fetch('https://api.ipify.org?format=json');
+        const data = await res.json();
+        return data.ip;
+      } catch {
+        return '';
+      }
+    }
+
+    async function fetchOffers() {
+      const ip = await getUserIP();
+      const ua = navigator.userAgent;
+      const url = LOCKER_API + '?ip=' + encodeURIComponent(ip) + '&user_agent=' + encodeURIComponent(ua) + '&ctype=0';
+      const response = await fetch(url, {
+        headers: { 'Authorization': 'Bearer ' + LOCKER_TOKEN }
+      });
+      if (!response.ok) throw new Error('API error');
+      const data = await response.json();
+      if (data.success && data.offers) return data.offers;
+      throw new Error('No offers');
+    }
+
+    const lockerModal = document.getElementById('locker-modal');
+    const lockerModalClose = document.getElementById('locker-modal-close');
+    const lockerModalOverlay = document.getElementById('locker-modal-overlay');
+    const lockerOffersGrid = document.getElementById('locker-offers-grid');
+    const lockerOffersLoading = document.getElementById('locker-offers-loading');
+    const lockerOffersError = document.getElementById('locker-offers-error');
+    const lockerRetryBtn = document.getElementById('locker-retry-btn');
+    const lockerUsageCount = document.getElementById('locker-usage-count');
     const downloadBtn = document.getElementById('download-btn');
-    downloadBtn.addEventListener('click', () => {
-      const link = document.createElement('a');
-      link.href = upscaledImg.src;
-      link.download = 'upscaled-sprite.png';
-      link.click();
+    const downloadBtnText = document.getElementById('download-btn-text');
+
+    function showLockerModal() {
+      lockerOffersGrid.classList.add('hidden');
+      lockerOffersLoading.classList.remove('hidden');
+      lockerOffersError.classList.add('hidden');
+      lockerModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      fetchOffers().then(offers => {
+        lockerOffersLoading.classList.add('hidden');
+        renderOffers(offers.slice(0, 6));
+        lockerOffersGrid.classList.remove('hidden');
+      }).catch(() => {
+        lockerOffersLoading.classList.add('hidden');
+        lockerOffersError.classList.remove('hidden');
+      });
+    }
+
+    function hideLockerModal() {
+      lockerModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function renderOffers(offers) {
+      lockerOffersGrid.innerHTML = '';
+      offers.forEach(offer => {
+        const card = document.createElement('div');
+        card.className = 'offer-card rounded-xl bg-dark-300/50 border border-white/5 p-4 transition-all cursor-pointer hover:border-brand-500/40 hover:-translate-y-0.5';
+        card.innerHTML =
+          '<div class="flex items-start gap-3">' +
+            '<img src="' + (offer.picture || '') + '" alt="" class="w-14 h-14 rounded-lg object-cover bg-dark-50 flex-shrink-0" onerror="this.style.display=\'none\'">' +
+            '<div class="flex-1 min-w-0">' +
+              '<h4 class="text-sm font-semibold text-white truncate">' + (offer.name_short || offer.name || 'App') + '</h4>' +
+              '<p class="text-xs text-gray-500 mt-0.5">' + (offer.device || '') + (offer.country ? ' · ' + offer.country : '') + '</p>' +
+              '<p class="text-xs text-gray-400 mt-2 line-clamp-2">' + (offer.adcopy || '') + '</p>' +
+              '<div class="flex items-center gap-2 mt-3">' +
+                '<a href="' + (offer.link || '#') + '" target="_blank" rel="noopener noreferrer" ' +
+                  'class="offer-complete-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white text-xs font-semibold shadow shadow-brand-500/20 hover:shadow-brand-500/40 hover:scale-105 transition-all" ' +
+                  'onclick="event.stopPropagation();">' +
+                  '<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>' +
+                  'Get Offer' +
+                '</a>' +
+                '<span class="offer-completed-badge hidden items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-semibold">' +
+                  '<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>' +
+                  'Opened' +
+                '</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        card.addEventListener('click', () => {
+          card.classList.add('completed-offer');
+          setUnlocked();
+          updateDownloadButton();
+        });
+
+        lockerOffersGrid.appendChild(card);
+      });
+    }
+
+    function updateDownloadButton() {
+      if (isUnlocked()) {
+        downloadBtn.disabled = false;
+        downloadBtnText.textContent = 'Download PNG';
+      } else {
+        const count = getUsageCount();
+        if (count >= USAGE_LIMIT) {
+          downloadBtn.disabled = true;
+          downloadBtnText.textContent = 'Complete an offer to download';
+        }
+      }
+    }
+
+    function handleDownloadClick() {
+      if (isUnlocked()) {
+        const link = document.createElement('a');
+        link.href = upscaledImg.src;
+        link.download = 'upscaled-sprite.png';
+        link.click();
+        return;
+      }
+
+      const count = incrementUsage();
+      lockerUsageCount.textContent = count;
+
+      if (count >= USAGE_LIMIT) {
+        showLockerModal();
+        updateDownloadButton();
+      } else {
+        const link = document.createElement('a');
+        link.href = upscaledImg.src;
+        link.download = 'upscaled-sprite.png';
+        link.click();
+      }
+    }
+
+    downloadBtn.addEventListener('click', handleDownloadClick);
+
+    lockerModalClose.addEventListener('click', hideLockerModal);
+    lockerModalOverlay.addEventListener('click', hideLockerModal);
+    lockerRetryBtn.addEventListener('click', showLockerModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lockerModal.classList.contains('hidden')) {
+        hideLockerModal();
+      }
     });
+
+    // Initialize download button state on page load
+    updateDownloadButton();
 
     // Scroll-triggered fade-in
     const observer = new IntersectionObserver((entries) => {
@@ -894,4 +1097,3 @@
   </script>
 </body>
 </html>
-
