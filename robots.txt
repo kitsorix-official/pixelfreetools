@@ -1,0 +1,10 @@
+# robots.txt — PixelFreeTools
+# https://pixelfreetools.top
+#
+# Everything on this site is public and safe to index. The pixel art scaler
+# runs entirely in the browser — no uploads, no server, no user accounts.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://pixelfreetools.top/sitemap.xml
