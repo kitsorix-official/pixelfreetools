@@ -1,0 +1,13 @@
+{
+  "name": "pixelfreetools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PixelScale Studio static site",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o tailwind.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,58 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="h-full dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Copyright policy, DMCA takedown procedure, and trademark notice process for PixelFreeTools. What we protect, how to report infringement, and how we respond." />
-  <title>Copyright Policy &amp; DMCA | PixelFreeTools</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Copyright policy, DMCA takedown procedure, and trademark notice process for PixelScale Studio. What we protect, how to report infringement, and how we respond." />
+  <title>Copyright Policy &amp; DMCA | PixelScale Studio</title>
   <link rel="canonical" href="https://pixelfreetools.top/copyright" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PixelScale Studio" />
+  <meta property="og:title" content="Copyright Policy &amp; DMCA | PixelScale Studio" />
+  <meta property="og:description" content="Copyright policy, DMCA takedown procedure, and trademark notice process for PixelScale Studio. What we protect, how to report infringement, and how we respond." />
+  <meta property="og:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PixelScale Studio - free online pixel art scaler and sprite upscaler" />
+  <meta property="og:url" content="https://pixelfreetools.top/copyright" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Copyright Policy &amp; DMCA | PixelScale Studio" />
+  <meta name="twitter:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta name="twitter:description" content="Copyright policy, DMCA takedown procedure, and trademark notice process for PixelScale Studio. What we protect, how to report infringement, and how we respond." />
+
+  <link rel="stylesheet" href="/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <meta name="msvalidate.01" content="B2E53C79E770973763213D81766BAC4B" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              400: '#7c8fff',
-              500: '#5b6bff',
-              600: '#4c57f5',
-              700: '#3d44e0',
-            },
-            dark: {
-              200: '#0f1020',
-              300: '#0a0b18',
-              400: '#060712',
-            }
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out',
-            'slide-up': 'slideUp 0.6s ease-out',
-          },
-          keyframes: {
-            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-            slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-          }
-        }
-      }
-    }
-  </script>
   <style>
+    html { color-scheme: dark; }
+    ::selection { background-color: #22c55e; color: #0f172a; }
     .gradient-text {
-      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      background: linear-gradient(135deg, #86efac 0%, #22c55e 55%, #16a34a 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .section-fade.visible { opacity: 1; transform: translateY(0); }
+    .pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
   </style>
   <script type="application/ld+json">
 {
@@ -74,8 +63,9 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
+<body class="bg-darkbg text-slate-100 font-sans min-h-screen antialiased overflow-x-hidden selection:bg-brand-500 selection:text-darkbg">
 
   <!-- ================= HEADER ================= -->
   <header class="relative" role="banner">
@@ -88,15 +78,15 @@
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center animate-fade-in">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-red-400 mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/60 border border-slate-700 text-xs font-medium text-red-400 mb-6">
             <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
             <span>Copyright, DMCA &amp; Trademarks</span>
           </div>
           <h1 id="copyright-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
             Copyright <span class="gradient-text">Policy</span>
           </h1>
-          <p class="text-base text-gray-400 leading-relaxed">
-            <time datetime="2026-10-03">Last Updated: October 3, 2026</time>
+          <p class="text-base text-slate-400 leading-relaxed">
+            <time datetime="2026-11-09">Last Updated: November 9, 2026</time>
           </p>
         </div>
       </div>
@@ -108,25 +98,30 @@
     </a>
 
     <!-- Navbar (fixed via CSS, visually at top regardless of DOM order) -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-slate-800" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
-          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
-              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-              </svg>
+          <a href="/" class="flex items-center gap-3 group" aria-label="PixelScale Studio home">
+            <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-darkbg font-bold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-expand"></i>
             </div>
-            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+            <div>
+              <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">PixelScale<span class="text-brand-500">.Studio</span></span>
+              <span class="hidden sm:inline-block text-xs text-slate-400 ml-2 px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Free 2026 Edition</span>
+            </div>
           </a>
 
           <!-- Desktop nav -->
-          <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
-            <li><a href="/what-is-pixel-art" class="text-gray-400 hover:text-white transition-colors">Guides</a></li>
-            <li><a href="/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+          <ul class="hidden lg:flex items-center gap-5 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="text-slate-400 hover:text-white transition-colors">How to Make</a></li>
+            <li><a href="/best-pixel-art-software" class="text-slate-400 hover:text-white transition-colors">Software</a></li>
+            <li><a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a></li>
+            <li><a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a></li>
             <li>
-              <a href="/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+              <a href="/#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
                 <span>Open Tool</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
@@ -134,20 +129,29 @@
           </ul>
 
           <!-- Mobile menu button -->
-          <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <div class="flex items-center gap-2">
+            <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors">
+              <i class="fa-solid fa-moon text-lg"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
               <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
+          </div>
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4" role="menu">
+        <div id="mobile-menu" class="hidden lg:hidden pb-4" role="menu">
           <ul class="space-y-2 text-sm" role="list">
-            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Guides</a></li>
-            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
-            <li><a href="/" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Open Tool</a></li>
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
+            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Best Software</a></li>
+            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="/#uploader" class="block px-3 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium text-center" role="menuitem">Open Tool</a></li>
           </ul>
         </div>
       </div>
@@ -158,7 +162,7 @@
   <main id="main-content" role="main">
 
     <!-- Section 1 -->
-    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="section-1-heading">
+    <section class="py-12 lg:py-16 border-b border-slate-800" aria-labelledby="section-1-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -171,15 +175,15 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed pl-16">
-            PixelFreeTools is a static website. It does not host, store, or display any user-generated content. All image processing is performed 100% client-side in your browser, and images never leave your device. The only content on this Site is the Site's own pages, documentation, and the tool itself.
+          <p class="text-slate-300 leading-relaxed pl-16">
+            PixelScale Studio is a static website. It does not host, store, or display any user-generated content. All image processing is performed 100% client-side in your browser, and images never leave your device. The only content on this Site is the Site's own pages, documentation, and the tool itself.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Section 2 -->
-    <section class="py-12 lg:py-16 bg-dark-200/30 border-b border-white/5" aria-labelledby="section-2-heading">
+    <section class="py-12 lg:py-16 bg-slate-900/40 border-b border-slate-800" aria-labelledby="section-2-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -192,23 +196,23 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
             Not everything on this site is protected the same way, and we would rather be precise about it than claim more than we actually hold. Here is the honest breakdown.
           </p>
 
-          <p class="text-gray-300 leading-relaxed mb-4 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-4 pl-16">
             <span class="font-semibold text-white">The tool's source code — open, MIT licensed.</span> The scaling tool is published under the MIT License. You may read it, run it, modify it, and redistribute it, including commercially, as long as you keep the licence text. See the <a href="https://github.com/kitsorix-official/pixelfreetools/blob/main/LICENSE" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">LICENSE file</a>. This is the one part of the site you are unambiguously free to build on.
           </p>
-          <p class="text-gray-300 leading-relaxed mb-4 pl-16">
-            <span class="font-semibold text-white">The name, design, and layout — all rights reserved.</span> The PixelFreeTools name, logo, page design, and visual identity are ours and are <em>not</em> covered by the MIT Licence. You may not copy them onto another site or use them in a way that suggests we endorse yours.
+          <p class="text-slate-300 leading-relaxed mb-4 pl-16">
+            <span class="font-semibold text-white">The name, design, and layout — all rights reserved.</span> The PixelScale Studio name, logo, page design, and visual identity are ours and are <em>not</em> covered by the MIT Licence. You may not copy them onto another site or use them in a way that suggests we endorse yours.
           </p>
-          <p class="text-gray-300 leading-relaxed mb-4 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-4 pl-16">
             <span class="font-semibold text-white">The written guides — free to reuse, no exclusivity promised.</span> Our guides are published free of charge and you are welcome to quote, translate, summarise, or republish them, ideally with a link back to the original. Some were drafted with AI assistance. Because material produced entirely by a machine may not attract copyright protection in the EU, the UK, or the US, we cannot honestly promise you exclusive rights in that text, and we will not claim any against you for reusing it. What we do ask is that you do not present the guides as entirely your own, and that you do not present our explanations as professional legal or financial advice.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             <span class="font-semibold text-white">Your images — yours.</span> We claim no rights over the images you load into the tool or the files it produces. Those never touch our servers. What rights you have in them depends entirely on where the images came from, and it is your responsibility to know.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16 mt-4">
+          <p class="text-slate-300 leading-relaxed pl-16 mt-4">
             This Site does not knowingly display copyrighted material belonging to third parties. Where tools, games, consoles, or software are mentioned by name, they belong to their respective owners and are referenced for identification only — see our <a href="/disclaimer" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">Legal Disclaimer</a>.
           </p>
         </div>
@@ -216,7 +220,7 @@
     </section>
 
     <!-- Section 3 -->
-    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="section-3-heading">
+    <section class="py-12 lg:py-16 border-b border-slate-800" aria-labelledby="section-3-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -229,13 +233,13 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             If you believe in good faith that material on this Site infringes your copyright, you may submit a takedown notice. Because the Site hosts no user content, infringement claims are limited to the Site's own pages.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16 mt-4">
+          <p class="text-slate-300 leading-relaxed pl-16 mt-4">
             Your notice must be submitted to us and include the following, as required by the DMCA:
           </p>
-          <ul class="pl-16 mt-4 space-y-2 text-gray-300 leading-relaxed list-disc list-inside">
+          <ul class="pl-16 mt-4 space-y-2 text-slate-300 leading-relaxed list-disc list-inside">
             <li>Identification of the copyrighted work claimed to be infringed.</li>
             <li>Identification of the material claimed to be infringing and where it is located (URL).</li>
             <li>Your contact information (name, email address, and mailing address).</li>
@@ -243,18 +247,18 @@
             <li>A statement, under penalty of perjury, that the information in your notice is accurate and that you are the owner or authorized to act on the owner's behalf.</li>
             <li>Your physical or electronic signature.</li>
           </ul>
-          <p class="text-gray-300 leading-relaxed pl-16 mt-4">
-            Submit your notice through our notice form. Please read what you are agreeing to before you submit — the statements carry legal weight, and submitting a notice you do not genuinely believe in can expose you to liability.
+          <p class="text-slate-300 leading-relaxed pl-16 mt-4">
+            Submit your notice through our GitHub profile. Please read what you are agreeing to before you submit — the statements carry legal weight, and submitting a notice you do not genuinely believe in can expose you to liability.
           </p>
-          <p class="text-sm text-gray-500 leading-relaxed pl-16 mt-3">
-            <a href="https://forms.gle/REPLACE_WITH_YOUR_NOTICE_FORM" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">Submit a copyright notice &rarr;</a>
+          <p class="text-sm text-slate-500 leading-relaxed pl-16 mt-3">
+            <a href="https://github.com/kitsorix-official/" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">Submit a copyright notice via GitHub &rarr;</a>
           </p>
         </div>
       </div>
     </section>
 
     <!-- Section 4 -->
-    <section class="py-12 lg:py-16 bg-dark-200/30 border-b border-white/5" aria-labelledby="section-4-heading">
+    <section class="py-12 lg:py-16 bg-slate-900/40 border-b border-slate-800" aria-labelledby="section-4-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -267,7 +271,7 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             We take copyright notices seriously. Valid notices are reviewed promptly, and infringing material is removed as quickly as possible. Because this is a hobby project run by a single developer, removal may occasionally take a little longer than on commercial platforms - we appreciate your patience.
           </p>
         </div>
@@ -275,7 +279,7 @@
     </section>
 
     <!-- Section 5 -->
-    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="section-5-heading">
+    <section class="py-12 lg:py-16 border-b border-slate-800" aria-labelledby="section-5-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -288,15 +292,15 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
             If you believe material was removed by mistake, you may submit a counter-notification through the same form, including: identification of the removed material and its previous location, your contact information, and a statement of good-faith belief that the removal was mistaken.
           </p>
           <div class="ml-16 rounded-xl bg-amber-500/5 border border-amber-500/20 p-5">
             <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-2">Read this before you send one</p>
-            <p class="text-gray-300 leading-relaxed">
+            <p class="text-slate-300 leading-relaxed">
               A counter-notification contains a declaration made under penalty of perjury. Knowingly sending a false one can expose you to liability, so please only send one if you genuinely hold the rights you are asserting.
             </p>
-            <p class="text-gray-300 leading-relaxed mt-3">
+            <p class="text-slate-300 leading-relaxed mt-3">
               By the same token, we do not automatically file counter-notices on our own behalf. Portions of this site were drafted with AI assistance, and material generated by a machine may attract no copyright protection at all in the EU, the UK, or the US. We will not swear to ownership of rights we do not hold. Where we have removed something in error, we will say so and put it back.
             </p>
           </div>
@@ -305,12 +309,12 @@
     </section>
 
     <!-- Section 6 -->
-    <section class="py-12 lg:py-16 bg-dark-200/30 border-b border-white/5" aria-labelledby="section-6-heading">
+    <section class="py-12 lg:py-16 bg-slate-900/40 border-b border-slate-800" aria-labelledby="section-6-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
-            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
             <div>
               <h2 id="section-6-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
@@ -318,16 +322,16 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
             We ask that every complaint arrive in good faith. A notice is a legal document, not a support ticket, and a misrepresentation can expose you to liability under the DMCA.
           </p>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
-            The same form also handles trademark concerns. If you own a brand that is described inaccurately on this site, or you would rather a reference to your product were removed, tell us through that form and we will look at it. We would much rather correct a genuine inaccuracy than have a lawyer letter about one.
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
+            The same process also handles trademark concerns. If you own a brand that is described inaccurately on this site, or you would rather a reference to your product were removed, tell us through our GitHub profile and we will look at it. We would much rather correct a genuine inaccuracy than have a lawyer letter about one.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             If you are unsure whether your situation qualifies as infringement, please consult a lawyer before filing. We would rather receive one accurate notice than five speculative ones.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16 mt-4">
+          <p class="text-slate-300 leading-relaxed pl-16 mt-4">
             For other legal questions, see our <a href="/terms" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">Terms of Use</a> and <a href="/disclaimer" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">Disclaimer</a>.
           </p>
         </div>
@@ -336,27 +340,29 @@
 
   </main>
 
-   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-            </svg>
-          </div>
-          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
-        </div>
-        <nav aria-label="Legal">
-          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
-            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
-            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
-            <li><a href="/terms" class="text-gray-500 hover:text-white transition-colors">Terms</a></li>
-            <li><a href="/copyright" class="text-gray-500 hover:text-white transition-colors">Copyright</a></li>
-            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
-          </ul>
-        </nav>
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+        <a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a>
+        <a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a>
+        <a href="/how-to-make-pixel-art" class="text-slate-400 hover:text-white transition-colors">How to Make</a>
+        <a href="/best-pixel-art-software" class="text-slate-400 hover:text-white transition-colors">Software</a>
+        <a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a>
+        <a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
+      </nav>
+      <nav aria-label="Legal">
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
+          <li><a href="/about" class="text-slate-400 hover:text-white transition-colors">About</a></li>
+          <li><a href="/privacy" class="text-slate-400 hover:text-white transition-colors">Privacy</a></li>
+          <li><a href="/terms" class="text-slate-400 hover:text-white transition-colors">Terms</a></li>
+          <li><a href="/copyright" class="text-slate-400 hover:text-white transition-colors">Copyright</a></li>
+          <li><a href="/disclaimer" class="text-slate-400 hover:text-white transition-colors">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <div class="pt-3 border-t border-slate-800 space-y-1">
+        <p>© 2026 PixelScale Studio. Free Online Pixel Art Scaler &amp; Sprite Upscaler Utility.</p>
+        <p class="text-[11px]">Hosted on <a href="https://pixelfreetools.top" class="text-brand-500 underline">pixelfreetools.top</a> · Optimized for game developers, pixel artists, and retro gaming enthusiasts.</p>
       </div>
     </div>
   </footer>

@@ -1,56 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="h-full dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The best pixel art software in 2026: free picks like Pixelorama, LibreSprite and Piskel, the Aseprite standard, plus mobile apps - and how to make pixel art in Photoshop, Procreate and more." />
-  <title>Best Pixel Art Software 2026 | Free & Paid Picks | PixelFreeTools</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="The best pixel art software in 2026: free picks like Pixelorama, LibreSprite and Piskel, Aseprite, mobile apps, and desktop alternatives." />
+  <title>Best Pixel Art Software 2026 | PixelScale Studio</title>
   <link rel="canonical" href="https://pixelfreetools.top/best-pixel-art-software" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="PixelScale Studio" />
+  <meta property="og:title" content="Best Pixel Art Software 2026 | PixelScale Studio" />
+  <meta property="og:description" content="The best pixel art software in 2026: free picks like Pixelorama, LibreSprite and Piskel, Aseprite, mobile apps, and desktop alternatives." />
+  <meta property="og:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PixelScale Studio - free online pixel art scaler and sprite upscaler" />
+  <meta property="og:url" content="https://pixelfreetools.top/best-pixel-art-software" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Best Pixel Art Software 2026 | PixelScale Studio" />
+  <meta name="twitter:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta name="twitter:description" content="The best pixel art software in 2026: free picks like Pixelorama, LibreSprite and Piskel, Aseprite, mobile apps, and desktop alternatives." />
+
+  <link rel="stylesheet" href="/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <meta name="msvalidate.01" content="B2E53C79E770973763213D81766BAC4B" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              400: '#7c8fff',
-              500: '#5b6bff',
-              600: '#4c57f5',
-              700: '#3d44e0',
-            },
-            dark: {
-              200: '#0f1020',
-              300: '#0a0b18',
-              400: '#060712',
-            }
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out',
-          },
-          keyframes: {
-            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-          }
-        }
-      }
-    }
-  </script>
   <style>
+    html { color-scheme: dark; }
+    ::selection { background-color: #22c55e; color: #0f172a; }
     .gradient-text {
-      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      background: linear-gradient(135deg, #86efac 0%, #22c55e 55%, #16a34a 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .section-fade.visible { opacity: 1; transform: translateY(0); }
+    .pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
   </style>
   <script type="application/ld+json">
   {
@@ -59,8 +50,8 @@
     "headline": "Best Pixel Art Software in 2026",
     "description": "A comparison of the best pixel art software in 2026 - Aseprite, Pixelorama, LibreSprite, Piskel, mobile apps - and answers about making pixel art in Photoshop, Procreate and more.",
     "url": "https://pixelfreetools.top/best-pixel-art-software",
-    "author": { "@type": "Organization", "name": "PixelFreeTools" },
-    "publisher": { "@type": "Organization", "name": "PixelFreeTools" },
+    "author": { "@type": "Organization", "name": "PixelScale Studio" },
+    "publisher": { "@type": "Organization", "name": "PixelScale Studio" },
     "datePublished": "2026-08-16",
     "dateModified": "2026-08-16"
   }
@@ -123,8 +114,9 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
+<body class="bg-darkbg text-slate-100 font-sans min-h-screen antialiased overflow-x-hidden selection:bg-brand-500 selection:text-darkbg">
 
   <!-- ================= HEADER ================= -->
   <header class="relative" role="banner">
@@ -132,19 +124,19 @@
     <div class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="software-heading">
       <div class="absolute inset-0 -z-10" aria-hidden="true">
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute top-20 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl"></div>
       </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center animate-fade-in">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-brand-400 mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/60 border border-slate-700 text-xs font-medium text-brand-400 mb-6">
             <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
             <span>2026 Comparison</span>
           </div>
           <h1 id="software-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
             The Best <span class="gradient-text">Pixel Art Software</span>
           </h1>
-          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
             Paid or free, browser or desktop, phone or PC - here's what to use in 2026, and why.
           </p>
         </div>
@@ -157,50 +149,56 @@
     </a>
 
     <!-- Navbar (fixed via CSS, visually at top regardless of DOM order) -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-slate-800" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
-              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-              </svg>
+          <a href="/" class="flex items-center gap-3 group" aria-label="PixelScale Studio home">
+            <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-darkbg font-bold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-expand"></i>
             </div>
-            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+            <div>
+              <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">PixelScale<span class="text-brand-500">.Studio</span></span>
+              <span class="hidden sm:inline-block text-xs text-slate-400 ml-2 px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Free 2026 Edition</span>
+            </div>
           </a>
 
           <ul class="hidden lg:flex items-center gap-5 text-sm" role="list">
-            <li><a href="/what-is-pixel-art" class="text-gray-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
-            <li><a href="/pixel-art-size-guide" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
-            <li><a href="/how-to-make-pixel-art" class="text-gray-400 hover:text-white transition-colors">How to Make</a></li>
+            <li><a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="text-slate-400 hover:text-white transition-colors">How to Make</a></li>
             <li><a href="/best-pixel-art-software" class="text-brand-400 hover:text-white transition-colors">Software</a></li>
-            <li><a href="/selling-pixel-art" class="text-gray-400 hover:text-white transition-colors">Selling</a></li>
-            <li><a href="/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a></li>
+            <li><a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a></li>
             <li>
-              <a href="/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+              <a href="/#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
                 <span>Open Tool</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </li>
           </ul>
 
-          <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <div class="flex items-center gap-2">
+            <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors">
+              <i class="fa-solid fa-moon text-lg"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
               <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
+          </div>
         </div>
 
         <div id="mobile-menu" class="hidden lg:hidden pb-4" role="menu">
           <ul class="space-y-2 text-sm" role="list">
-            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
-            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Size Guide</a></li>
-            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
-            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white" role="menuitem">Best Software</a></li>
-            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
-            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
-            <li><a href="/" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Open Tool</a></li>
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
+            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg bg-slate-800/60 text-slate-300 hover:bg-slate-700 hover:text-white" role="menuitem">Best Software</a></li>
+            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="/#uploader" class="block px-3 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium text-center" role="menuitem">Open Tool</a></li>
           </ul>
         </div>
       </div>
@@ -211,7 +209,7 @@
   <main id="main-content" role="main">
 
     <!-- Quick pick table -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="quick-pick-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="quick-pick-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">The Short Answer</span>
@@ -219,47 +217,47 @@
           <div class="overflow-x-auto">
             <table class="w-full text-sm text-left">
               <thead>
-                <tr class="border-b border-white/10 text-gray-400">
+                <tr class="border-b border-slate-700 text-slate-400">
                   <th class="py-3 pr-4 font-semibold">Your situation</th>
                   <th class="py-3 pr-4 font-semibold">Best pick</th>
                   <th class="py-3 font-semibold">Price</th>
                 </tr>
               </thead>
-              <tbody class="text-gray-300">
-                <tr class="border-b border-white/5">
+              <tbody class="text-slate-300">
+                <tr class="border-b border-slate-800">
                   <td class="py-3 pr-4">Serious sprite and animation work</td>
                   <td class="py-3 pr-4 text-brand-400 font-semibold">Aseprite</td>
-                  <td class="py-3 text-gray-500">$20 once</td>
+                  <td class="py-3 text-slate-500">$20 once</td>
                 </tr>
-                <tr class="border-b border-white/5">
+                <tr class="border-b border-slate-800">
                   <td class="py-3 pr-4">Zero budget, want a real editor</td>
                   <td class="py-3 pr-4 text-brand-400 font-semibold">Pixelorama</td>
-                  <td class="py-3 text-gray-500">Free</td>
+                  <td class="py-3 text-slate-500">Free</td>
                 </tr>
-                <tr class="border-b border-white/5">
+                <tr class="border-b border-slate-800">
                   <td class="py-3 pr-4">Aseprite-style workflow, free</td>
                   <td class="py-3 pr-4 text-brand-400 font-semibold">LibreSprite</td>
-                  <td class="py-3 text-gray-500">Free</td>
+                  <td class="py-3 text-slate-500">Free</td>
                 </tr>
-                <tr class="border-b border-white/5">
+                <tr class="border-b border-slate-800">
                   <td class="py-3 pr-4">Draw instantly in a browser</td>
                   <td class="py-3 pr-4 text-brand-400 font-semibold">Piskel</td>
-                  <td class="py-3 text-gray-500">Free</td>
+                  <td class="py-3 text-slate-500">Free</td>
                 </tr>
-                <tr class="border-b border-white/5">
+                <tr class="border-b border-slate-800">
                   <td class="py-3 pr-4">Community, sharing and challenges</td>
                   <td class="py-3 pr-4 text-brand-400 font-semibold">Pixilart</td>
-                  <td class="py-3 text-gray-500">Free (Pro $4.99/mo)</td>
+                  <td class="py-3 text-slate-500">Free (Pro $4.99/mo)</td>
                 </tr>
-                <tr class="border-b border-white/5">
+                <tr class="border-b border-slate-800">
                   <td class="py-3 pr-4">On your phone</td>
                   <td class="py-3 pr-4 text-brand-400 font-semibold">Pixel Studio</td>
-                  <td class="py-3 text-gray-500">Free (PRO paid)</td>
+                  <td class="py-3 text-slate-500">Free (PRO paid)</td>
                 </tr>
                 <tr>
                   <td class="py-3 pr-4">You already own Photoshop/Krita/GIMP</td>
                   <td class="py-3 pr-4 text-brand-400 font-semibold">Use that</td>
-                  <td class="py-3 text-gray-500">Already have it</td>
+                  <td class="py-3 text-slate-500">Already have it</td>
                 </tr>
               </tbody>
             </table>
@@ -269,7 +267,7 @@
     </section>
 
     <!-- Top picks detail -->
-    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="top-picks-heading">
+    <section class="py-14 lg:py-18 bg-slate-900/40 border-b border-slate-800" aria-labelledby="top-picks-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-semibold uppercase tracking-wider mb-4">The Picks</span>
@@ -277,27 +275,27 @@
           <div class="space-y-5">
             <div>
               <h3 class="text-lg font-bold text-white mb-1">Aseprite - the industry standard ($20 once)</h3>
-              <p class="text-gray-400 leading-relaxed">The tool most professional pixel artists ship games with. Animation timeline, onion skinning, tilemaps, palettes and Lua scripting. It is open source (you can compile it free), and paid builds cost about $20 as a one-time purchase on Steam or itch.io - no subscription. If you draw sprites regularly, it's worth every dollar.</p>
+              <p class="text-slate-400 leading-relaxed">The tool most professional pixel artists ship games with. Animation timeline, onion skinning, tilemaps, palettes and Lua scripting. It is open source (you can compile it free), and paid builds cost about $20 as a one-time purchase on Steam or itch.io - no subscription. If you draw sprites regularly, it's worth every dollar.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">Pixelorama - the best free editor</h3>
-              <p class="text-gray-400 leading-relaxed">Open source (MIT), built with Godot, actively maintained. Layers, onion skinning, animation, rectangular/isometric/hex tilemaps, and non-destructive effects. Runs on Windows, Mac, Linux and in the browser, and exports tilemaps straight to Godot TileSet. The strongest free option in 2026.</p>
+              <p class="text-slate-400 leading-relaxed">Open source (MIT), built with Godot, actively maintained. Layers, onion skinning, animation, rectangular/isometric/hex tilemaps, and non-destructive effects. Runs on Windows, Mac, Linux and in the browser, and exports tilemaps straight to Godot TileSet. The strongest free option in 2026.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">LibreSprite - free Aseprite-style workflow</h3>
-              <p class="text-gray-400 leading-relaxed">A community fork of Aseprite from when it was still GPL. Same shortcuts and interface, so any Aseprite tutorial applies. Development is slower and it lacks newer Aseprite features (tilemaps, slicing), but for basic drawing and animation it's perfectly capable and free.</p>
+              <p class="text-slate-400 leading-relaxed">A community fork of Aseprite from when it was still GPL. Same shortcuts and interface, so any Aseprite tutorial applies. Development is slower and it lacks newer Aseprite features (tilemaps, slicing), but for basic drawing and animation it's perfectly capable and free.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">Piskel - fastest way to start</h3>
-              <p class="text-gray-400 leading-relaxed">A browser editor that works instantly - no account, no install, no ads. Basic (no layers, no pressure sensitivity) but with animation preview and sprite-sheet export. Ideal for game jams and first-time artists.</p>
+              <p class="text-slate-400 leading-relaxed">A browser editor that works instantly - no account, no install, no ads. Basic (no layers, no pressure sensitivity) but with animation preview and sprite-sheet export. Ideal for game jams and first-time artists.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">Pixilart - drawing plus community</h3>
-              <p class="text-gray-400 leading-relaxed">Free browser editor and mobile app with a large social community, challenges and sharing. The free tier shows ads; Pro ($4.99/mo) removes them and adds cloud storage.</p>
+              <p class="text-slate-400 leading-relaxed">Free browser editor and mobile app with a large social community, challenges and sharing. The free tier shows ads; Pro ($4.99/mo) removes them and adds cloud storage.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">GraphicsGale - classic Windows editor</h3>
-              <p class="text-gray-400 leading-relaxed">A long-running sprite animation editor, now free. Great for frame-by-frame work, though it's Windows-focused and no longer actively developed.</p>
+              <p class="text-slate-400 leading-relaxed">A long-running sprite animation editor, now free. Great for frame-by-frame work, though it's Windows-focused and no longer actively developed.</p>
             </div>
           </div>
         </div>
@@ -305,12 +303,12 @@
     </section>
 
     <!-- Mobile -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="mobile-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="mobile-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Mobile</span>
           <h2 id="mobile-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Best apps for phone and tablet</h2>
-          <div class="space-y-4 text-gray-400 leading-relaxed">
+          <div class="space-y-4 text-slate-400 leading-relaxed">
             <p><strong class="text-white">Pixel Studio</strong> (Android/iOS/desktop) - the most popular mobile editor. Layers, animation, GIF and sprite-sheet export. Free with ads; PRO (a one-time purchase) removes ads and unlocks dark theme, tile mode and bigger canvases.</p>
             <p><strong class="text-white">Pixelc</strong> (Android) - free, open source and completely ad-free. Layers, frames, tiling and onion skinning. A great no-cost pick.</p>
             <p><strong class="text-white">Pixilart mobile</strong> - the community app; ad-supported on the free tier.</p>
@@ -322,12 +320,12 @@
     </section>
 
     <!-- Apps you already own -->
-    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="existing-heading">
+    <section class="py-14 lg:py-18 bg-slate-900/40 border-b border-slate-800" aria-labelledby="existing-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
-          <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">You Already Have It</span>
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">You Already Have It</span>
           <h2 id="existing-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Can I make pixel art in the apps I already use?</h2>
-          <div class="space-y-4 text-gray-400 leading-relaxed">
+          <div class="space-y-4 text-slate-400 leading-relaxed">
             <p><strong class="text-white">Procreate:</strong> Yes. Small canvas, turn off StreamLine, 1px hard pencil with no anti-aliasing, zoom in, draw on the grid.</p>
             <p><strong class="text-white">Photoshop:</strong> Yes. Small document, hard round 1px brush with anti-alias off, and Image Resample set to "Nearest Neighbor".</p>
             <p><strong class="text-white">Krita:</strong> Yes. It even ships dedicated pixel art tools and a grid view - a great free option.</p>
@@ -343,12 +341,12 @@
     </section>
 
     <!-- AI tools -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="ai-tools-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="ai-tools-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
-          <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-semibold uppercase tracking-wider mb-4">AI Tools</span>
+          <span class="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-4">AI Tools</span>
           <h2 id="ai-tools-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">What about AI pixel art generators?</h2>
-          <div class="space-y-3 text-gray-400 leading-relaxed">
+          <div class="space-y-3 text-slate-400 leading-relaxed">
             <p>
               General image models (Midjourney, DALL-E, Stable Diffusion) produce <strong class="text-white">pixel-styled</strong> images, not true pixel art - edges bleed, pixel sizes vary, and palettes explode. That's fine for concepts, but not for game assets.
             </p>
@@ -364,51 +362,51 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="software-faq-heading">
+    <section class="py-14 lg:py-18 bg-slate-900/40 border-b border-slate-800" aria-labelledby="software-faq-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade mb-8">
           <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">FAQ</span>
           <h2 id="software-faq-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Software questions, answered</h2>
         </div>
         <div class="section-fade space-y-3">
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">What is the best free pixel art software?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Pixelorama is the strongest free editor - open source, with layers, animation, tilemaps and a browser version. LibreSprite is a free Aseprite-style fork, and Piskel is the fastest browser option.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">Pixelorama is the strongest free editor - open source, with layers, animation, tilemaps and a browser version. LibreSprite is a free Aseprite-style fork, and Piskel is the fastest browser option.</div>
           </details>
 
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">Is Aseprite worth the money?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">For anyone doing sustained sprite animation, yes - it's a one-time ~$20 purchase (no subscription) with the best animation timeline, tilemaps and sprite-sheet export in the business.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">For anyone doing sustained sprite animation, yes - it's a one-time ~$20 purchase (no subscription) with the best animation timeline, tilemaps and sprite-sheet export in the business.</div>
           </details>
 
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">Does pixel art cost money?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">It doesn't have to. Free tools like Piskel, Pixelorama, LibreSprite and GIMP cover everything beginners need. Aseprite costs about $20 once for the paid build.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">It doesn't have to. Free tools like Piskel, Pixelorama, LibreSprite and GIMP cover everything beginners need. Aseprite costs about $20 once for the paid build.</div>
           </details>
 
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">Does pixel art need wifi?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">No. Desktop editors work fully offline. Only browser or cloud-based apps (Piskel, Pixilart web) need a connection.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">No. Desktop editors work fully offline. Only browser or cloud-based apps (Piskel, Pixilart web) need a connection.</div>
           </details>
 
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">What is the best pixel art app for mobile?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Pixel Studio is the most popular (free with ads, paid PRO tier). Pixelc is free, open source and ad-free. Pixilart mobile is community-based and ad-supported.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">Pixel Studio is the most popular (free with ads, paid PRO tier). Pixelc is free, open source and ad-free. Pixilart mobile is community-based and ad-supported.</div>
           </details>
         </div>
       </div>
@@ -417,17 +415,17 @@
     <!-- CTA -->
     <section class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="software-cta-heading">
       <div class="absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-brand-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-brand-500/10 via-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center section-fade">
         <h2 id="software-cta-heading" class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6">
           Made with any of these? <span class="gradient-text">Scale it up crisp.</span>
         </h2>
-        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+        <p class="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl mx-auto">
           No matter which editor you chose, our free scaler keeps your sprites sharp up to 32x - fully client-side.
         </p>
-        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-2xl shadow-brand-500/40 hover:shadow-brand-500/60 hover:scale-105 transition-all">
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-500 hover:bg-brand-600 text-darkbg font-bold text-lg shadow-2xl shadow-brand-500/40 hover:shadow-brand-500/60 hover:scale-105 transition-all">
           <span>Upscale a Sprite Free</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
@@ -437,34 +435,28 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="flex items-center gap-2">
-          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-            </svg>
-          </div>
-          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
-        </div>
-        <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
-          <a href="/what-is-pixel-art" class="text-gray-500 hover:text-white transition-colors">What Is Pixel Art</a>
-          <a href="/pixel-art-size-guide" class="text-gray-500 hover:text-white transition-colors">Size Guide</a>
-          <a href="/how-to-make-pixel-art" class="text-gray-500 hover:text-white transition-colors">How to Make</a>
-          <a href="/best-pixel-art-software" class="text-gray-500 hover:text-white transition-colors">Software</a>
-          <a href="/selling-pixel-art" class="text-gray-500 hover:text-white transition-colors">Selling</a>
-          <a href="/faq" class="text-gray-500 hover:text-white transition-colors">FAQ</a>
-        </nav>
-        <nav aria-label="Legal">
-          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
-            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
-            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
-            <li><a href="/terms" class="text-gray-500 hover:text-white transition-colors">Terms</a></li>
-            <li><a href="/copyright" class="text-gray-500 hover:text-white transition-colors">Copyright</a></li>
-            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
-          </ul>
-        </nav>
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+        <a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a>
+        <a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a>
+        <a href="/how-to-make-pixel-art" class="text-slate-400 hover:text-white transition-colors">How to Make</a>
+        <a href="/best-pixel-art-software" class="text-slate-400 hover:text-white transition-colors">Software</a>
+        <a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a>
+        <a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
+      </nav>
+      <nav aria-label="Legal">
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
+          <li><a href="/about" class="text-slate-400 hover:text-white transition-colors">About</a></li>
+          <li><a href="/privacy" class="text-slate-400 hover:text-white transition-colors">Privacy</a></li>
+          <li><a href="/terms" class="text-slate-400 hover:text-white transition-colors">Terms</a></li>
+          <li><a href="/copyright" class="text-slate-400 hover:text-white transition-colors">Copyright</a></li>
+          <li><a href="/disclaimer" class="text-slate-400 hover:text-white transition-colors">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <div class="pt-3 border-t border-slate-800 space-y-1">
+        <p>© 2026 PixelScale Studio. Free Online Pixel Art Scaler &amp; Sprite Upscaler Utility.</p>
+        <p class="text-[11px]">Hosted on <a href="https://pixelfreetools.top" class="text-brand-500 underline">pixelfreetools.top</a> · Optimized for game developers, pixel artists, and retro gaming enthusiasts.</p>
       </div>
     </div>
   </footer>

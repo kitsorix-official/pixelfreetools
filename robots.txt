@@ -1,4 +1,4 @@
-# robots.txt — PixelFreeTools
+# robots.txt — PixelScale Studio
 # https://pixelfreetools.top
 #
 # Everything on this site is public and safe to index. The pixel art scaler

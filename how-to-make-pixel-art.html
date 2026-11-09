@@ -1,56 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="h-full dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Learn how to make pixel art step by step: choose a tool, pick a canvas size, and master outlines, shading and dithering. A beginner's guide with pro tips." />
-  <title>How to Make Pixel Art | Beginner's Step-by-Step Guide | PixelFreeTools</title>
+  <title>How to Make Pixel Art | Beginner's Guide | PixelScale Studio</title>
   <link rel="canonical" href="https://pixelfreetools.top/how-to-make-pixel-art" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="PixelScale Studio" />
+  <meta property="og:title" content="How to Make Pixel Art | Beginner's Guide | PixelScale Studio" />
+  <meta property="og:description" content="Learn how to make pixel art step by step: choose a tool, pick a canvas size, and master outlines, shading and dithering. A beginner's guide with pro tips." />
+  <meta property="og:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PixelScale Studio - free online pixel art scaler and sprite upscaler" />
+  <meta property="og:url" content="https://pixelfreetools.top/how-to-make-pixel-art" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Make Pixel Art | Beginner's Guide | PixelScale Studio" />
+  <meta name="twitter:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta name="twitter:description" content="Learn how to make pixel art step by step: choose a tool, pick a canvas size, and master outlines, shading and dithering. A beginner's guide with pro tips." />
+
+  <link rel="stylesheet" href="/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <meta name="msvalidate.01" content="B2E53C79E770973763213D81766BAC4B" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              400: '#7c8fff',
-              500: '#5b6bff',
-              600: '#4c57f5',
-              700: '#3d44e0',
-            },
-            dark: {
-              200: '#0f1020',
-              300: '#0a0b18',
-              400: '#060712',
-            }
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out',
-          },
-          keyframes: {
-            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-          }
-        }
-      }
-    }
-  </script>
   <style>
+    html { color-scheme: dark; }
+    ::selection { background-color: #22c55e; color: #0f172a; }
     .gradient-text {
-      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      background: linear-gradient(135deg, #86efac 0%, #22c55e 55%, #16a34a 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .section-fade.visible { opacity: 1; transform: translateY(0); }
+    .pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
   </style>
   <script type="application/ld+json">
   {
@@ -59,8 +50,8 @@
     "headline": "How to Make Pixel Art: A Beginner's Guide",
     "description": "A step-by-step guide to making pixel art - choosing a tool, canvas size, and learning outlines, shading and dithering, with tips for specific apps.",
     "url": "https://pixelfreetools.top/how-to-make-pixel-art",
-    "author": { "@type": "Organization", "name": "PixelFreeTools" },
-    "publisher": { "@type": "Organization", "name": "PixelFreeTools" },
+    "author": { "@type": "Organization", "name": "PixelScale Studio" },
+    "publisher": { "@type": "Organization", "name": "PixelScale Studio" },
     "datePublished": "2026-08-16",
     "dateModified": "2026-08-16"
   }
@@ -118,8 +109,9 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
+<body class="bg-darkbg text-slate-100 font-sans min-h-screen antialiased overflow-x-hidden selection:bg-brand-500 selection:text-darkbg">
 
   <!-- ================= HEADER ================= -->
   <header class="relative" role="banner">
@@ -127,19 +119,19 @@
     <div class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden" aria-labelledby="howto-heading">
       <div class="absolute inset-0 -z-10" aria-hidden="true">
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute top-20 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl"></div>
       </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center animate-fade-in">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-brand-400 mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/60 border border-slate-700 text-xs font-medium text-brand-400 mb-6">
             <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
             <span>Beginner's Guide</span>
           </div>
           <h1 id="howto-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
             How to Make <span class="gradient-text">Pixel Art</span>
           </h1>
-          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
             Your first sprite is closer than you think. Here's exactly how to start - tool, canvas, and the techniques that make it look good.
           </p>
         </div>
@@ -152,50 +144,56 @@
     </a>
 
     <!-- Navbar (fixed via CSS, visually at top regardless of DOM order) -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-slate-800" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
-              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-              </svg>
+          <a href="/" class="flex items-center gap-3 group" aria-label="PixelScale Studio home">
+            <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-darkbg font-bold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-expand"></i>
             </div>
-            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+            <div>
+              <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">PixelScale<span class="text-brand-500">.Studio</span></span>
+              <span class="hidden sm:inline-block text-xs text-slate-400 ml-2 px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Free 2026 Edition</span>
+            </div>
           </a>
 
           <ul class="hidden lg:flex items-center gap-5 text-sm" role="list">
-            <li><a href="/what-is-pixel-art" class="text-gray-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
-            <li><a href="/pixel-art-size-guide" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a></li>
             <li><a href="/how-to-make-pixel-art" class="text-brand-400 hover:text-white transition-colors">How to Make</a></li>
-            <li><a href="/best-pixel-art-software" class="text-gray-400 hover:text-white transition-colors">Software</a></li>
-            <li><a href="/selling-pixel-art" class="text-gray-400 hover:text-white transition-colors">Selling</a></li>
-            <li><a href="/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="/best-pixel-art-software" class="text-slate-400 hover:text-white transition-colors">Software</a></li>
+            <li><a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a></li>
+            <li><a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a></li>
             <li>
-              <a href="/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+              <a href="/#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
                 <span>Open Tool</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </li>
           </ul>
 
-          <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <div class="flex items-center gap-2">
+            <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors">
+              <i class="fa-solid fa-moon text-lg"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
               <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
+          </div>
         </div>
 
         <div id="mobile-menu" class="hidden lg:hidden pb-4" role="menu">
           <ul class="space-y-2 text-sm" role="list">
-            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
-            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Size Guide</a></li>
-            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
-            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Best Software</a></li>
-            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
-            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
-            <li><a href="/" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Open Tool</a></li>
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg bg-slate-800/60 text-slate-300 hover:bg-slate-700 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
+            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Best Software</a></li>
+            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="/#uploader" class="block px-3 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium text-center" role="menuitem">Open Tool</a></li>
           </ul>
         </div>
       </div>
@@ -206,15 +204,15 @@
   <main id="main-content" role="main">
 
     <!-- Before you start -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="start-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="start-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">Step 0</span>
           <h2 id="start-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Before you start</h2>
-          <p class="text-gray-400 leading-relaxed mb-4">
+          <p class="text-slate-400 leading-relaxed mb-4">
             Is pixel art hard? The honest answer: the basics are easy, mastery takes time. The good news is the grid does most of the work. If you can place squares carefully, you can make pixel art. A mouse is fine - because you place individual pixels rather than drawing freehand strokes, a tablet is a nice-to-have, not a requirement.
           </p>
-          <p class="text-gray-400 leading-relaxed">
+          <p class="text-slate-400 leading-relaxed">
             You need three things: a <a href="/best-pixel-art-software" class="text-brand-400 hover:text-white transition-colors">pixel editor</a> (free is fine), a small canvas, and patience. That's it.
           </p>
         </div>
@@ -222,12 +220,12 @@
     </section>
 
     <!-- Step 1 tool -->
-    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="step1-heading">
+    <section class="py-14 lg:py-18 bg-slate-900/40 border-b border-slate-800" aria-labelledby="step1-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-semibold uppercase tracking-wider mb-4">Step 1</span>
           <h2 id="step1-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Pick a tool</h2>
-          <div class="space-y-3 text-gray-400 leading-relaxed">
+          <div class="space-y-3 text-slate-400 leading-relaxed">
             <p>
               Don't overthink this. The fastest way to start is a browser editor - <strong class="text-white">Piskel</strong> or <strong class="text-white">Pixilart</strong> open in a tab and let you draw in seconds. If you'd rather have a desktop app, <strong class="text-white">Pixelorama</strong> and <strong class="text-white">LibreSprite</strong> are free, and <strong class="text-white">Aseprite</strong> (~$20 once) is the industry standard worth growing into. <a href="/best-pixel-art-software" class="text-brand-400 hover:text-white transition-colors">Full comparison here.</a>
             </p>
@@ -240,12 +238,12 @@
     </section>
 
     <!-- Step 2 canvas -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="step2-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="step2-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">Step 2</span>
           <h2 id="step2-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Set a small canvas and turn the grid on</h2>
-          <div class="space-y-3 text-gray-400 leading-relaxed">
+          <div class="space-y-3 text-slate-400 leading-relaxed">
             <p>
               Start with <strong class="text-white">16x16</strong> or <strong class="text-white">32x32</strong>. Small canvases force you to focus on the silhouette, which is the most important skill in pixel art. A 64x64 canvas is great once you want detail. <a href="/pixel-art-size-guide" class="text-brand-400 hover:text-white transition-colors">See the size guide.</a>
             </p>
@@ -258,27 +256,27 @@
     </section>
 
     <!-- Step 3 techniques -->
-    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="step3-heading">
+    <section class="py-14 lg:py-18 bg-slate-900/40 border-b border-slate-800" aria-labelledby="step3-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
-          <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">Step 3</span>
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">Step 3</span>
           <h2 id="step3-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Learn the four core techniques</h2>
           <div class="space-y-5">
             <div>
               <h3 class="text-lg font-bold text-white mb-1">1. Silhouette first</h3>
-              <p class="text-gray-400 leading-relaxed">Sketch the outline with one dark color before adding any detail. A sprite that reads well as a flat black shape will read well in-game.</p>
+              <p class="text-slate-400 leading-relaxed">Sketch the outline with one dark color before adding any detail. A sprite that reads well as a flat black shape will read well in-game.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">2. Limited palette</h3>
-              <p class="text-gray-400 leading-relaxed">Pick 4-16 colors and stick to them. Start with one base color, a darker shade for shadows, a lighter one for highlights. Avoid gradients - flat colors are the pixel art look.</p>
+              <p class="text-slate-400 leading-relaxed">Pick 4-16 colors and stick to them. Start with one base color, a darker shade for shadows, a lighter one for highlights. Avoid gradients - flat colors are the pixel art look.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">3. Dithering</h3>
-              <p class="text-gray-400 leading-relaxed">To blend two colors or fake a gradient, alternate them in a checkerboard or dotted pattern. Used in small doses, dithering adds texture; overused, it looks noisy.</p>
+              <p class="text-slate-400 leading-relaxed">To blend two colors or fake a gradient, alternate them in a checkerboard or dotted pattern. Used in small doses, dithering adds texture; overused, it looks noisy.</p>
             </div>
             <div>
               <h3 class="text-lg font-bold text-white mb-1">4. Outlines (optional)</h3>
-              <p class="text-gray-400 leading-relaxed">Many artists outline characters in a dark color to make them pop against backgrounds. Outlines are a style choice - if you like the clean look, skip them.</p>
+              <p class="text-slate-400 leading-relaxed">Many artists outline characters in a dark color to make them pop against backgrounds. Outlines are a style choice - if you like the clean look, skip them.</p>
             </div>
           </div>
         </div>
@@ -286,12 +284,12 @@
     </section>
 
     <!-- Common subjects -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="subjects-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="subjects-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
-          <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-semibold uppercase tracking-wider mb-4">What To Draw</span>
+          <span class="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-4">What To Draw</span>
           <h2 id="subjects-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">Good first projects</h2>
-          <div class="space-y-3 text-gray-400 leading-relaxed">
+          <div class="space-y-3 text-slate-400 leading-relaxed">
             <ul class="space-y-2">
               <li class="flex gap-3"><span class="text-brand-400">•</span><span>A <strong class="text-white">coin or gem</strong> on a 16x16 canvas - fast, satisfying, teaches shading.</span></li>
               <li class="flex gap-3"><span class="text-brand-400">•</span><span>A <strong class="text-white">grass tile</strong> on 16x16 - teaches tiling and repetition.</span></li>
@@ -307,12 +305,12 @@
     </section>
 
     <!-- App-specific -->
-    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="apps-heading">
+    <section class="py-14 lg:py-18 bg-slate-900/40 border-b border-slate-800" aria-labelledby="apps-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">In Your App</span>
           <h2 id="apps-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">How to set up specific apps</h2>
-          <div class="space-y-4 text-gray-400 leading-relaxed">
+          <div class="space-y-4 text-slate-400 leading-relaxed">
             <p><strong class="text-white">Procreate:</strong> new canvas, small size; turn off "StreamLine" on a 1px "Technical Pen" or hard brush; zoom to 800%; draw on the grid.</p>
             <p><strong class="text-white">Photoshop:</strong> small document; hard round 1px brush with <em>anti-alias unchecked</em>; under Image > Image Size set Resample to "Nearest Neighbor" so scaling stays crisp.</p>
             <p><strong class="text-white">Krita / GIMP:</strong> both have pixel art tool presets and a grid view; use the 1px pencil, not the brush.</p>
@@ -327,20 +325,20 @@
     </section>
 
     <!-- Pixelating an image -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="image-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="image-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-semibold uppercase tracking-wider mb-4">Pixelating</span>
           <h2 id="image-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">How to pixelate an existing image</h2>
-          <p class="text-gray-400 leading-relaxed mb-4">
+          <p class="text-slate-400 leading-relaxed mb-4">
             To turn a photo or illustration into pixel-style art:
           </p>
-          <ol class="space-y-2 text-gray-400 leading-relaxed list-decimal list-inside mb-6">
+          <ol class="space-y-2 text-slate-400 leading-relaxed list-decimal list-inside mb-6">
             <li>Shrink the image to a tiny size - <strong class="text-white">16 to 64 pixels</strong> wide (this is the "pixelation" step).</li>
             <li>Scale it back up with <strong class="text-white">nearest-neighbor</strong> resampling so the squares stay crisp.</li>
             <li>Manually clean up the result in a pixel editor if you want it to look intentional.</li>
           </ol>
-          <p class="text-gray-400 leading-relaxed">
+          <p class="text-slate-400 leading-relaxed">
             If your goal is the reverse - taking a small sprite and making it bigger without blur - that's upscaling, and our free tool does exactly that up to 32x.
           </p>
         </div>
@@ -348,12 +346,12 @@
     </section>
 
     <!-- Learning path -->
-    <section class="py-14 lg:py-18 bg-dark-200/30 border-b border-white/5" aria-labelledby="learn-heading">
+    <section class="py-14 lg:py-18 bg-slate-900/40 border-b border-slate-800" aria-labelledby="learn-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">Keep Going</span>
           <h2 id="learn-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">How to keep improving</h2>
-          <div class="space-y-3 text-gray-400 leading-relaxed">
+          <div class="space-y-3 text-slate-400 leading-relaxed">
             <ul class="space-y-2">
               <li class="flex gap-3"><span class="text-brand-400">•</span><span><strong class="text-white">Practice daily</strong> - even 15 minutes of sprite drawing beats a weekly marathon.</span></li>
               <li class="flex gap-3"><span class="text-brand-400">•</span><span><strong class="text-white">Study palettes</strong> - sites like Lospec share curated palettes and active challenges.</span></li>
@@ -369,43 +367,43 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-14 lg:py-18 border-b border-white/5" aria-labelledby="howto-faq-heading">
+    <section class="py-14 lg:py-18 border-b border-slate-800" aria-labelledby="howto-faq-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade mb-8">
           <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">FAQ</span>
           <h2 id="howto-faq-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Common questions</h2>
         </div>
         <div class="section-fade space-y-3">
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">Is pixel art hard?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">The basics are easy - most people draw a first sprite in minutes. Mastery of outlines, shading and animation takes practice, but it is one of the most approachable digital art styles.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">The basics are easy - most people draw a first sprite in minutes. Mastery of outlines, shading and animation takes practice, but it is one of the most approachable digital art styles.</div>
           </details>
 
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">Can I draw pixel art with a mouse?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Yes. Because you place individual pixels rather than freehand strokes, a mouse works perfectly. Many professional artists started with a mouse.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">Yes. Because you place individual pixels rather than freehand strokes, a mouse works perfectly. Many professional artists started with a mouse.</div>
           </details>
 
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">Should pixel art have outlines?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">It is a style choice. Outlines make characters readable against busy backgrounds; clean styles work fine without them.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">It is a style choice. Outlines make characters readable against busy backgrounds; clean styles work fine without them.</div>
           </details>
 
-          <details class="group rounded-2xl bg-dark-200/50 border border-white/5 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
+          <details class="group rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/30 transition-colors open:border-brand-500/30">
             <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 class="text-lg font-semibold text-white">How do I pixelate an image?</h3>
               <span class="text-brand-400 text-2xl transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
-            <div class="px-6 pb-6 text-gray-400 leading-relaxed">Shrink it to a tiny size (16-64px), then scale back up with nearest-neighbor resampling so the squares stay sharp. Then clean it up by hand if needed.</div>
+            <div class="px-6 pb-6 text-slate-400 leading-relaxed">Shrink it to a tiny size (16-64px), then scale back up with nearest-neighbor resampling so the squares stay sharp. Then clean it up by hand if needed.</div>
           </details>
         </div>
       </div>
@@ -414,17 +412,17 @@
     <!-- CTA -->
     <section class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="howto-cta-heading">
       <div class="absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-brand-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-brand-500/10 via-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center section-fade">
         <h2 id="howto-cta-heading" class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6">
           Finished a sprite? <span class="gradient-text">Make it bigger.</span>
         </h2>
-        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+        <p class="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl mx-auto">
           Scale your pixel art up to 32x with zero blur using our free, client-side scaler - nothing ever leaves your browser.
         </p>
-        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-2xl shadow-brand-500/40 hover:shadow-brand-500/60 hover:scale-105 transition-all">
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-500 hover:bg-brand-600 text-darkbg font-bold text-lg shadow-2xl shadow-brand-500/40 hover:shadow-brand-500/60 hover:scale-105 transition-all">
           <span>Upscale Your Sprite Free</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
@@ -434,34 +432,28 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="flex items-center gap-2">
-          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-            </svg>
-          </div>
-          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
-        </div>
-        <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
-          <a href="/what-is-pixel-art" class="text-gray-500 hover:text-white transition-colors">What Is Pixel Art</a>
-          <a href="/pixel-art-size-guide" class="text-gray-500 hover:text-white transition-colors">Size Guide</a>
-          <a href="/how-to-make-pixel-art" class="text-gray-500 hover:text-white transition-colors">How to Make</a>
-          <a href="/best-pixel-art-software" class="text-gray-500 hover:text-white transition-colors">Software</a>
-          <a href="/selling-pixel-art" class="text-gray-500 hover:text-white transition-colors">Selling</a>
-          <a href="/faq" class="text-gray-500 hover:text-white transition-colors">FAQ</a>
-        </nav>
-        <nav aria-label="Legal">
-          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
-            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
-            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
-            <li><a href="/terms" class="text-gray-500 hover:text-white transition-colors">Terms</a></li>
-            <li><a href="/copyright" class="text-gray-500 hover:text-white transition-colors">Copyright</a></li>
-            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
-          </ul>
-        </nav>
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+        <a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a>
+        <a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a>
+        <a href="/how-to-make-pixel-art" class="text-slate-400 hover:text-white transition-colors">How to Make</a>
+        <a href="/best-pixel-art-software" class="text-slate-400 hover:text-white transition-colors">Software</a>
+        <a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a>
+        <a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
+      </nav>
+      <nav aria-label="Legal">
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
+          <li><a href="/about" class="text-slate-400 hover:text-white transition-colors">About</a></li>
+          <li><a href="/privacy" class="text-slate-400 hover:text-white transition-colors">Privacy</a></li>
+          <li><a href="/terms" class="text-slate-400 hover:text-white transition-colors">Terms</a></li>
+          <li><a href="/copyright" class="text-slate-400 hover:text-white transition-colors">Copyright</a></li>
+          <li><a href="/disclaimer" class="text-slate-400 hover:text-white transition-colors">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <div class="pt-3 border-t border-slate-800 space-y-1">
+        <p>© 2026 PixelScale Studio. Free Online Pixel Art Scaler &amp; Sprite Upscaler Utility.</p>
+        <p class="text-[11px]">Hosted on <a href="https://pixelfreetools.top" class="text-brand-500 underline">pixelfreetools.top</a> · Optimized for game developers, pixel artists, and retro gaming enthusiasts.</p>
       </div>
     </div>
   </footer>

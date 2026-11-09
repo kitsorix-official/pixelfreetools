@@ -1,58 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="h-full dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PixelFreeTools processes every image client-side in your browser, so your files are never uploaded to us. Read exactly what we do and do not collect, including third-party requests." />
-  <title>Privacy Policy | PixelFreeTools</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="PixelScale Studio processes every image client-side in your browser, so files are never uploaded. Read exactly what we do and do not collect." />
+  <title>Privacy Policy | PixelScale Studio</title>
   <link rel="canonical" href="https://pixelfreetools.top/privacy" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PixelScale Studio" />
+  <meta property="og:title" content="Privacy Policy | PixelScale Studio" />
+  <meta property="og:description" content="PixelScale Studio processes every image client-side in your browser, so files are never uploaded. Read exactly what we do and do not collect." />
+  <meta property="og:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PixelScale Studio - free online pixel art scaler and sprite upscaler" />
+  <meta property="og:url" content="https://pixelfreetools.top/privacy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy | PixelScale Studio" />
+  <meta name="twitter:image" content="https://pixelfreetools.top/og-image.png" />
+  <meta name="twitter:description" content="PixelScale Studio processes every image client-side in your browser, so files are never uploaded. Read exactly what we do and do not collect." />
+
+  <link rel="stylesheet" href="/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <meta name="msvalidate.01" content="B2E53C79E770973763213D81766BAC4B" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              400: '#7c8fff',
-              500: '#5b6bff',
-              600: '#4c57f5',
-              700: '#3d44e0',
-            },
-            dark: {
-              200: '#0f1020',
-              300: '#0a0b18',
-              400: '#060712',
-            }
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out',
-            'slide-up': 'slideUp 0.6s ease-out',
-          },
-          keyframes: {
-            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-            slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-          }
-        }
-      }
-    }
-  </script>
   <style>
+    html { color-scheme: dark; }
+    ::selection { background-color: #22c55e; color: #0f172a; }
     .gradient-text {
-      background: linear-gradient(135deg, #7c8fff 0%, #c084fc 50%, #f472b6 100%);
+      background: linear-gradient(135deg, #86efac 0%, #22c55e 55%, #16a34a 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .section-fade.visible { opacity: 1; transform: translateY(0); }
+    .pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
   </style>
   <script type="application/ld+json">
 {
@@ -74,8 +63,9 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-dark-300 text-gray-200 font-sans antialiased overflow-x-hidden">
+<body class="bg-darkbg text-slate-100 font-sans min-h-screen antialiased overflow-x-hidden selection:bg-brand-500 selection:text-darkbg">
 
   <!-- ================= HEADER ================= -->
   <header class="relative" role="banner">
@@ -88,15 +78,15 @@
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center animate-fade-in">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-green-400 mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/60 border border-slate-700 text-xs font-medium text-green-400 mb-6">
             <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
             <span>Your Images Never Leave Your Browser</span>
           </div>
           <h1 id="privacy-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6">
             Privacy <span class="gradient-text">Policy</span>
           </h1>
-          <p class="text-base text-gray-400 leading-relaxed">
-            <time datetime="2026-10-03">Last Updated: October 3, 2026</time>
+          <p class="text-base text-slate-400 leading-relaxed">
+            <time datetime="2026-11-09">Last Updated: November 9, 2026</time>
           </p>
         </div>
       </div>
@@ -108,48 +98,60 @@
     </a>
 
     <!-- Navbar (fixed via CSS, visually at top regardless of DOM order) -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-dark-300/70 border-b border-white/5" aria-label="Main navigation">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-slate-800" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
-          <a href="/" class="flex items-center gap-2 group" aria-label="PixelFreeTools home">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
-              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-              </svg>
+          <a href="/" class="flex items-center gap-3 group" aria-label="PixelScale Studio home">
+            <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-darkbg font-bold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-expand"></i>
             </div>
-            <span class="font-bold text-white text-lg tracking-tight">Pixel<span class="text-brand-400">Free</span>Tools</span>
+            <div>
+              <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">PixelScale<span class="text-brand-500">.Studio</span></span>
+              <span class="hidden sm:inline-block text-xs text-slate-400 ml-2 px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Free 2026 Edition</span>
+            </div>
           </a>
 
           <!-- Desktop nav -->
-          <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
-            <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-            <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How it works</a></li>
-            <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+          <ul class="hidden lg:flex items-center gap-5 text-sm" role="list">
+            <li><a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="text-slate-400 hover:text-white transition-colors">How to Make</a></li>
+            <li><a href="/best-pixel-art-software" class="text-slate-400 hover:text-white transition-colors">Software</a></li>
+            <li><a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a></li>
+            <li><a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a></li>
             <li>
-              <a href="#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
-                <span>Upload Sprite</span>
+              <a href="/#uploader" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-105 transition-all">
+                <span>Open Tool</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </li>
           </ul>
 
           <!-- Mobile menu button -->
-          <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <div class="flex items-center gap-2">
+            <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors">
+              <i class="fa-solid fa-moon text-lg"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
               <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
+          </div>
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4" role="menu">
+        <div id="mobile-menu" class="hidden lg:hidden pb-4" role="menu">
           <ul class="space-y-2 text-sm" role="list">
-            <li><a href="#features" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">Features</a></li>
-            <li><a href="#how-it-works" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">How it works</a></li>
-            <li><a href="#faq" class="block px-3 py-2 rounded-lg text-gray-300 hover:bg-white/5 hover:text-white" role="menuitem">FAQ</a></li>
-            <li><a href="#uploader" class="block px-3 py-2 rounded-lg bg-gradient-to-r from-brand-500 to-purple-500 text-white font-medium text-center" role="menuitem">Upload Sprite</a></li>
+            <li><a href="/what-is-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">What Is Pixel Art</a></li>
+            <li><a href="/pixel-art-size-guide" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Size Guide</a></li>
+            <li><a href="/how-to-make-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">How to Make Pixel Art</a></li>
+            <li><a href="/best-pixel-art-software" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Best Software</a></li>
+            <li><a href="/selling-pixel-art" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">Selling Pixel Art</a></li>
+            <li><a href="/faq" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white" role="menuitem">FAQ</a></li>
+            <li><a href="/#uploader" class="block px-3 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-darkbg font-medium text-center" role="menuitem">Open Tool</a></li>
           </ul>
         </div>
       </div>
@@ -160,19 +162,19 @@
   <main id="main-content" role="main">
 
     <!-- Introduction -->
-    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="intro-heading">
+    <section class="py-12 lg:py-16 border-b border-slate-800" aria-labelledby="intro-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <h2 id="intro-heading" class="sr-only">Introduction</h2>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            PixelFreeTools is an independent, free tool run by one developer. We built it this way because the images you scale are often work in progress that you would rather not hand to a stranger's server. That principle shapes everything below: your images are processed inside your own browser and are never transmitted to us.
+          <p class="text-lg text-slate-300 leading-relaxed">
+            PixelScale Studio is an independent, free tool run by one developer. We built it this way because the images you scale are often work in progress that you would rather not hand to a stranger's server. That principle shapes everything below: your images are processed inside your own browser and are never transmitted to us.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Section 1 -->
-    <section class="py-12 lg:py-16 bg-dark-200/30 border-b border-white/5" aria-labelledby="section-1-heading">
+    <section class="py-12 lg:py-16 bg-slate-900/40 border-b border-slate-800" aria-labelledby="section-1-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -185,7 +187,7 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             The pixel art scaler runs entirely inside your web browser using the built-in HTML5 Canvas API. When you drop a file onto the page, the scaling happens on your own device. Your image is never uploaded to us, never written to any server we control, and never seen by us. It does not pass through a backend, and we have no copy of it.
           </p>
         </div>
@@ -193,12 +195,12 @@
     </section>
 
     <!-- Section 2 -->
-    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="section-2-heading">
+    <section class="py-12 lg:py-16 border-b border-slate-800" aria-labelledby="section-2-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
-            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
             </div>
             <div>
               <h2 id="section-2-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
@@ -206,23 +208,21 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
             We set no cookies of our own. We do not run Google Analytics, Facebook Pixel, or any similar analytics or advertising tracker, and the scaler does not write anything to your device's local storage. There are no accounts to create and nothing to sign in to.
           </p>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
-            We would rather be straight with you about the rest, though. Like almost every website, this one loads some files from other companies' servers, and those companies necessarily see your IP address in the process. When you use the unlock feature, we also pass your IP address and browser User-Agent string to <span class="text-white">appsave.online</span>, an offer-wall provider, so a sponsor can serve offers to you. They operate under their own privacy policy and may set their own cookies.
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
+            We would rather be straight with you about the rest, though. Like almost every website, this one loads some files from other companies' servers, and those companies necessarily see your IP address in the process. They operate under their own privacy policies and may set their own cookies.
           </p>
           <p class="font-semibold text-white mt-8 mb-3 pl-16">Third parties that receive a request from your browser:</p>
-          <ul class="list-disc space-y-2 pl-16 mb-6 text-gray-300 leading-relaxed marker:text-green-500/60" role="list">
-            <li><span class="font-medium text-white">cdn.tailwindcss.com</span> &mdash; the Tailwind CSS library that styles this site</li>
+          <ul class="list-disc space-y-2 pl-16 mb-6 text-slate-300 leading-relaxed marker:text-green-500/60" role="list">
             <li><span class="font-medium text-white">fonts.googleapis.com / fonts.gstatic.com</span> &mdash; Google Fonts, which serves the typefaces</li>
-            <li><span class="font-medium text-white">api.ipify.org</span> &mdash; used only to discover your public IP address for the offer wall</li>
-            <li><span class="font-medium text-white">appsave.online</span> &mdash; the offer-wall provider, contacted only when you use the unlock feature</li>
+            <li><span class="font-medium text-white">cdnjs.cloudflare.com</span> &mdash; serves the Font Awesome icon stylesheet</li>
           </ul>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
             None of these see your images. Your image data is never included in any of these requests, because it never leaves your browser in the first place.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             This site is hosted on <span class="text-white">GitHub Pages</span>, so the hosting provider also processes technical request data such as your IP address to serve you the page. If we ever add advertising of our own, we will update this policy and ask for your consent before setting any non-essential cookie.
           </p>
         </div>
@@ -230,7 +230,7 @@
     </section>
 
     <!-- Section 3 -->
-    <section class="py-12 lg:py-16 bg-dark-200/30 border-b border-white/5" aria-labelledby="section-3-heading">
+    <section class="py-12 lg:py-16 bg-slate-900/40 border-b border-slate-800" aria-labelledby="section-3-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -243,23 +243,23 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
-            PixelFreeTools is an independent project run by a single developer, <a href="https://github.com/kitsorix-official/" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">Kitsorix</a>, based in REPLACE_WITH_YOUR_COUNTRY. There is no company behind it and no external funding. For the purposes of data protection law, that individual is the data controller for the limited information described on this page.
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
+            PixelScale Studio is an independent project run by a single developer, <a href="https://github.com/kitsorix-official/" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">Kitsorix</a>. There is no company behind it and no external funding. For the purposes of data protection law, that individual is the data controller for the limited information described on this page.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16">
-            You can reach us through our <a href="https://forms.gle/REPLACE_WITH_YOUR_NOTICE_FORM" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">contact form</a> or the <a href="/about" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">About page</a>. Because we are one person, a message may take a little longer to answer than it would from a support team, but every message is read by the same developer who runs the site.
+          <p class="text-slate-300 leading-relaxed pl-16">
+            You can reach us through our <a href="https://github.com/kitsorix-official/" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">GitHub profile</a> or the <a href="/about" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">About page</a>. Because we are one person, a message may take a little longer to answer than it would from a support team, but every message is read by the same developer who runs the site.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Section 4 -->
-    <section class="py-12 lg:py-16 bg-dark-200/30 border-b border-white/5" aria-labelledby="section-4-heading">
+    <section class="py-12 lg:py-16 bg-slate-900/40 border-b border-slate-800" aria-labelledby="section-4-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
-            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
-              <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
             </div>
             <div>
               <h2 id="section-4-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
@@ -267,13 +267,13 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
             If you are in the EEA or the UK, you have the right to ask us for access to any personal data we hold about you, to have it corrected or erased, to restrict or object to how it is used, and to complain to your country's data protection authority. Contact us and we will respond.
           </p>
-          <p class="text-gray-300 leading-relaxed mb-6 pl-16">
-            In practice there is very little to hand over. We do not operate accounts, we do not sell data, we do not run analytics, and we never receive your images. The only personal information we ever hold is what you choose to type into our contact form, and we keep that only for as long as it takes to deal with your matter.
+          <p class="text-slate-300 leading-relaxed mb-6 pl-16">
+            In practice there is very little to hand over. We do not operate accounts, we do not sell data, we do not run analytics, and we never receive your images. The only personal information we ever hold is what you choose to send us when you contact us, and we keep that only for as long as it takes to deal with your matter.
           </p>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             Third-party providers listed above are separate controllers or processors for the data they handle on their own behalf. Requests concerning their data should go to them, though we are happy to point you the right way.
           </p>
         </div>
@@ -281,7 +281,7 @@
     </section>
 
     <!-- Section 5 -->
-    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="section-5-heading">
+    <section class="py-12 lg:py-16 border-b border-slate-800" aria-labelledby="section-5-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <div class="flex items-start gap-4 mb-6">
@@ -294,7 +294,7 @@
               </h2>
             </div>
           </div>
-          <p class="text-gray-300 leading-relaxed pl-16">
+          <p class="text-slate-300 leading-relaxed pl-16">
             If this policy changes, the date at the top of the page will change with it. If we make a material change &mdash; for instance if we introduce advertising &mdash; we will update this page before the change takes effect, and describe exactly what is different. Continuing to use the site after a change means you accept the updated policy.
           </p>
         </div>
@@ -302,13 +302,13 @@
     </section>
 
     <!-- Contact / Questions -->
-    <section class="py-12 lg:py-16 border-b border-white/5" aria-labelledby="contact-heading">
+    <section class="py-12 lg:py-16 border-b border-slate-800" aria-labelledby="contact-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="section-fade">
           <h2 id="contact-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-4">
             Questions about this policy?
           </h2>
-          <p class="text-gray-300 leading-relaxed mb-6">
+          <p class="text-slate-300 leading-relaxed mb-6">
             If you have any questions or concerns about our privacy practices, please reach out through our <a href="/about" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">About page</a> or visit our <a href="https://github.com/kitsorix-official/" class="text-brand-400 hover:text-brand-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer">GitHub repository</a>. For rules about using the tool, see our <a href="/terms" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">Terms of Use</a>; for copyright matters, see our <a href="/copyright" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">Copyright Policy</a>.
           </p>
         </div>
@@ -317,27 +317,29 @@
 
   </main>
 
-   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-white/5 bg-dark-400/50" role="contentinfo">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <div class="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6z"/>
-            </svg>
-          </div>
-          <span class="text-sm text-gray-500">© 2026 PixelFreeTools.</span>
-        </div>
-        <nav aria-label="Legal">
-          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
-            <li><a href="/about" class="text-gray-500 hover:text-white transition-colors">About</a></li>
-            <li><a href="/privacy" class="text-gray-500 hover:text-white transition-colors">Privacy</a></li>
-            <li><a href="/terms" class="text-gray-500 hover:text-white transition-colors">Terms</a></li>
-            <li><a href="/copyright" class="text-gray-500 hover:text-white transition-colors">Copyright</a></li>
-            <li><a href="/disclaimer" class="text-gray-500 hover:text-white transition-colors">Disclaimer</a></li>
-          </ul>
-        </nav>
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <nav aria-label="Guides" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+        <a href="/what-is-pixel-art" class="text-slate-400 hover:text-white transition-colors">What Is Pixel Art</a>
+        <a href="/pixel-art-size-guide" class="text-slate-400 hover:text-white transition-colors">Size Guide</a>
+        <a href="/how-to-make-pixel-art" class="text-slate-400 hover:text-white transition-colors">How to Make</a>
+        <a href="/best-pixel-art-software" class="text-slate-400 hover:text-white transition-colors">Software</a>
+        <a href="/selling-pixel-art" class="text-slate-400 hover:text-white transition-colors">Selling</a>
+        <a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
+      </nav>
+      <nav aria-label="Legal">
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" role="list">
+          <li><a href="/about" class="text-slate-400 hover:text-white transition-colors">About</a></li>
+          <li><a href="/privacy" class="text-slate-400 hover:text-white transition-colors">Privacy</a></li>
+          <li><a href="/terms" class="text-slate-400 hover:text-white transition-colors">Terms</a></li>
+          <li><a href="/copyright" class="text-slate-400 hover:text-white transition-colors">Copyright</a></li>
+          <li><a href="/disclaimer" class="text-slate-400 hover:text-white transition-colors">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <div class="pt-3 border-t border-slate-800 space-y-1">
+        <p>© 2026 PixelScale Studio. Free Online Pixel Art Scaler &amp; Sprite Upscaler Utility.</p>
+        <p class="text-[11px]">Hosted on <a href="https://pixelfreetools.top" class="text-brand-500 underline">pixelfreetools.top</a> · Optimized for game developers, pixel artists, and retro gaming enthusiasts.</p>
       </div>
     </div>
   </footer>
